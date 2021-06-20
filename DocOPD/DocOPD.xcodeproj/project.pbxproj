@@ -106,8 +106,7 @@
 		DD0752F3267E15690098EB81 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				DD0752F6267E15960098EB81 /* Model */,
-				DD0752F5267E15880098EB81 /* ViewModel */,
+				DD075312267FD52F0098EB81 /* Model */,
 				DD0752F4267E157E0098EB81 /* Controller */,
 			);
 			path = SignUp;
@@ -119,20 +118,6 @@
 				DD075300267E16460098EB81 /* SignUpViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		DD0752F5267E15880098EB81 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DD0752F6267E15960098EB81 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DD0752F7267E159D0098EB81 /* Storyboards */ = {
@@ -150,6 +135,13 @@
 				DD075308267E16D00098EB81 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DD075312267FD52F0098EB81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
