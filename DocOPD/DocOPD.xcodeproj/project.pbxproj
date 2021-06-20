@@ -13,6 +13,7 @@
 		DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0752FC267E161C0098EB81 /* SignUp.storyboard */; };
 		DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075300267E16460098EB81 /* SignUpViewController.swift */; };
 		DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075308267E16D00098EB81 /* AppDelegate.swift */; };
+		DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075313267FD5750098EB81 /* SignUpModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DD0752FC267E161C0098EB81 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		DD075300267E16460098EB81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DD075308267E16D00098EB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD075313267FD5750098EB81 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		DD075312267FD52F0098EB81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD075313267FD5750098EB81 /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */,
 				DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
 			);
