@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         let nvc: UINavigationController = UINavigationController(rootViewController: initialViewController)
+        nvc.setNavigationBarHidden(true, animated: false)
         appDelegate?.window?.rootViewController = nvc
         appDelegate?.window?.makeKeyAndVisible()
         return true

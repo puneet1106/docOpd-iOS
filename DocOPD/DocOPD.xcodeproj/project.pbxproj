@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DD0752C5267E14690098EB81 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0752C4267E14690098EB81 /* Tests_iOS.swift */; };
-		DD0752D6267E14690098EB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0752AB267E14690098EB81 /* Assets.xcassets */; };
-		DD0752F9267E15BC0098EB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0752F8267E15BC0098EB81 /* Main.storyboard */; };
 		DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0752FC267E161C0098EB81 /* SignUp.storyboard */; };
 		DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075300267E16460098EB81 /* SignUpViewController.swift */; };
 		DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075308267E16D00098EB81 /* AppDelegate.swift */; };
 		DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075313267FD5750098EB81 /* SignUpModel.swift */; };
+		DD075351267FD8470098EB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07531F267FD8470098EB81 /* Assets.xcassets */; };
+		DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD075320267FD8470098EB81 /* LaunchScreen.storyboard */; };
+		DD075353267FD8480098EB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD075322267FD8470098EB81 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD0752AB267E14690098EB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD0752B0267E14690098EB81 /* DocOPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocOPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0752B3267E14690098EB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0752C0267E14690098EB81 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0752C4267E14690098EB81 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		DD0752C6267E14690098EB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD0752F8267E15BC0098EB81 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD0752FC267E161C0098EB81 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		DD075300267E16460098EB81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DD075308267E16D00098EB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD075313267FD5750098EB81 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		DD07531F267FD8470098EB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD075321267FD8470098EB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD075323267FD8470098EB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +63,10 @@
 		DD0752A3267E14650098EB81 = {
 			isa = PBXGroup;
 			children = (
-				DD0752A8267E14660098EB81 /* Shared */,
 				DD0752B2267E14690098EB81 /* iOS */,
 				DD0752C3267E14690098EB81 /* Tests iOS */,
 				DD0752B1267E14690098EB81 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		DD0752A8267E14660098EB81 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				DD0752AB267E14690098EB81 /* Assets.xcassets */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		DD0752B1267E14690098EB81 /* Products */ = {
@@ -88,6 +81,7 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD07531C267FD8470098EB81 /* Resources */,
 				DD075307267E16B50098EB81 /* AppDelegate */,
 				DD0752F7267E159D0098EB81 /* Storyboards */,
 				DD0752F3267E15690098EB81 /* SignUp */,
@@ -125,7 +119,6 @@
 		DD0752F7267E159D0098EB81 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DD0752F8267E15BC0098EB81 /* Main.storyboard */,
 				DD0752FC267E161C0098EB81 /* SignUp.storyboard */,
 			);
 			path = Storyboards;
@@ -145,6 +138,16 @@
 				DD075313267FD5750098EB81 /* SignUpModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD07531C267FD8470098EB81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD07531F267FD8470098EB81 /* Assets.xcassets */,
+				DD075320267FD8470098EB81 /* LaunchScreen.storyboard */,
+				DD075322267FD8470098EB81 /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +230,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0752D6267E14690098EB81 /* Assets.xcassets in Resources */,
-				DD0752F9267E15BC0098EB81 /* Main.storyboard in Resources */,
 				DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */,
+				DD075353267FD8480098EB81 /* Main.storyboard in Resources */,
+				DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */,
+				DD075351267FD8470098EB81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +274,25 @@
 			targetProxy = DD0752C1267E14690098EB81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD075320267FD8470098EB81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD075321267FD8470098EB81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DD075322267FD8470098EB81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD075323267FD8470098EB81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DD0752D8267E14690098EB81 /* Debug */ = {
