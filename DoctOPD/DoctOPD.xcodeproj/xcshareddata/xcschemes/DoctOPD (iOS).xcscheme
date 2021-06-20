@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD0752AF267E14690098EB81"
-               BuildableName = "DocOPD.app"
-               BlueprintName = "DocOPD (iOS)"
-               ReferencedContainer = "container:DocOPD.xcodeproj">
+               BuildableName = "DoctOPD.app"
+               BlueprintName = "DoctOPD (iOS)"
+               ReferencedContainer = "container:DoctOPD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "DD0752BF267E14690098EB81"
                BuildableName = "Tests iOS.xctest"
                BlueprintName = "Tests iOS"
-               ReferencedContainer = "container:DocOPD.xcodeproj">
+               ReferencedContainer = "container:DoctOPD.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD0752AF267E14690098EB81"
-            BuildableName = "DocOPD.app"
-            BlueprintName = "DocOPD (iOS)"
-            ReferencedContainer = "container:DocOPD.xcodeproj">
+            BuildableName = "DoctOPD.app"
+            BlueprintName = "DoctOPD (iOS)"
+            ReferencedContainer = "container:DoctOPD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD0752AF267E14690098EB81"
-            BuildableName = "DocOPD.app"
-            BlueprintName = "DocOPD (iOS)"
-            ReferencedContainer = "container:DocOPD.xcodeproj">
+            BuildableName = "DoctOPD.app"
+            BlueprintName = "DoctOPD (iOS)"
+            ReferencedContainer = "container:DoctOPD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD0752B0267E14690098EB81 /* DocOPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocOPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0752B0267E14690098EB81 /* DoctOPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctOPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0752B3267E14690098EB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0752C0267E14690098EB81 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0752C4267E14690098EB81 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		DD0752B1267E14690098EB81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD0752B0267E14690098EB81 /* DocOPD.app */,
+				DD0752B0267E14690098EB81 /* DoctOPD.app */,
 				DD0752C0267E14690098EB81 /* Tests iOS.xctest */,
 			);
 			name = Products;
@@ -153,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD0752AF267E14690098EB81 /* DocOPD (iOS) */ = {
+		DD0752AF267E14690098EB81 /* DoctOPD (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD0752DA267E14690098EB81 /* Build configuration list for PBXNativeTarget "DocOPD (iOS)" */;
+			buildConfigurationList = DD0752DA267E14690098EB81 /* Build configuration list for PBXNativeTarget "DoctOPD (iOS)" */;
 			buildPhases = (
 				DD0752AC267E14690098EB81 /* Sources */,
 				DD0752AD267E14690098EB81 /* Frameworks */,
@@ -165,9 +165,9 @@
 			);
 			dependencies = (
 			);
-			name = "DocOPD (iOS)";
+			name = "DoctOPD (iOS)";
 			productName = "DocOPD (iOS)";
-			productReference = DD0752B0267E14690098EB81 /* DocOPD.app */;
+			productReference = DD0752B0267E14690098EB81 /* DoctOPD.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DD0752BF267E14690098EB81 /* Tests iOS */ = {
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD0752A7267E14650098EB81 /* Build configuration list for PBXProject "DocOPD" */;
+			buildConfigurationList = DD0752A7267E14650098EB81 /* Build configuration list for PBXProject "DoctOPD" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD0752AF267E14690098EB81 /* DocOPD (iOS) */,
+				DD0752AF267E14690098EB81 /* DoctOPD (iOS) */,
 				DD0752BF267E14690098EB81 /* Tests iOS */,
 			);
 		};
@@ -270,7 +270,7 @@
 /* Begin PBXTargetDependency section */
 		DD0752C2267E14690098EB81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD0752AF267E14690098EB81 /* DocOPD (iOS) */;
+			target = DD0752AF267E14690098EB81 /* DoctOPD (iOS) */;
 			targetProxy = DD0752C1267E14690098EB81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -419,8 +419,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DocOPD.DocOPD;
-				PRODUCT_NAME = DocOPD;
+				PRODUCT_BUNDLE_IDENTIFIER = DoctOPD.DoctOPD;
+				PRODUCT_NAME = DoctOPD;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,8 +440,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DocOPD.DocOPD;
-				PRODUCT_NAME = DocOPD;
+				PRODUCT_BUNDLE_IDENTIFIER = DoctOPD.DoctOPD;
+				PRODUCT_NAME = DoctOPD;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD0752A7267E14650098EB81 /* Build configuration list for PBXProject "DocOPD" */ = {
+		DD0752A7267E14650098EB81 /* Build configuration list for PBXProject "DoctOPD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD0752D8267E14690098EB81 /* Debug */,
@@ -504,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD0752DA267E14690098EB81 /* Build configuration list for PBXNativeTarget "DocOPD (iOS)" */ = {
+		DD0752DA267E14690098EB81 /* Build configuration list for PBXNativeTarget "DoctOPD (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD0752DB267E14690098EB81 /* Debug */,

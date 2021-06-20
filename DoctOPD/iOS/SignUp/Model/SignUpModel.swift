@@ -1,6 +1,6 @@
 //
 //  SignUpModel.swift
-//  DocOPD (iOS)
+//  DoctOPD (iOS)
 //
 //  Created by Puneet on 21/06/21.
 //

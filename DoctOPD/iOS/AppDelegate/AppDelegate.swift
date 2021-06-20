@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DocOPD (iOS)
+//  DoctOPD (iOS)
 //
 //  Created by Puneet on 19/06/21.
 //
