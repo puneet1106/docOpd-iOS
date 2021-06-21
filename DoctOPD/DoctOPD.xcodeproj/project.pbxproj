@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20B73E3B0EF7143095DA0A6E /* Pods_DoctOPD__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */; };
 		DD0752C5267E14690098EB81 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0752C4267E14690098EB81 /* Tests_iOS.swift */; };
 		DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0752FC267E161C0098EB81 /* SignUp.storyboard */; };
 		DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075300267E16460098EB81 /* SignUpViewController.swift */; };
@@ -15,6 +16,18 @@
 		DD075351267FD8470098EB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07531F267FD8470098EB81 /* Assets.xcassets */; };
 		DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD075320267FD8470098EB81 /* LaunchScreen.storyboard */; };
 		DD075353267FD8480098EB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD075322267FD8470098EB81 /* Main.storyboard */; };
+		DD07539F2681208E0098EB81 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07539E2681208E0098EB81 /* OnboardingPageViewController.swift */; };
+		DD0753A3268120EA0098EB81 /* OnboardingFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753A2268120EA0098EB81 /* OnboardingFirstViewController.swift */; };
+		DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753A6268120FE0098EB81 /* OnboardingSecondViewController.swift */; };
+		DD0753AB2681210D0098EB81 /* OnboardingThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753AA2681210D0098EB81 /* OnboardingThirdViewController.swift */; };
+		DD0753AF2681212A0098EB81 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0753AE2681212A0098EB81 /* Onboarding.storyboard */; };
+		DD0753B32681288E0098EB81 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753B22681288E0098EB81 /* PageControlViewController.swift */; };
+		DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753C8268146960098EB81 /* OPTUtilities.swift */; };
+		DD0753CF268146970098EB81 /* OPTAPPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753C9268146960098EB81 /* OPTAPPConstants.swift */; };
+		DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753CB268146970098EB81 /* OPTViewController.swift */; };
+		DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753CC268146970098EB81 /* OPTServerConstants.swift */; };
+		DD0753D3268146970098EB81 /* OPTUtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753CD268146970098EB81 /* OPTUtilityExtension.swift */; };
+		DD0753D926814D290098EB81 /* TextFieldValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753D826814D290098EB81 /* TextFieldValidations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18BE9DE488F7CDD322595679 /* Pods-DoctOPD (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctOPD (iOS).release.xcconfig"; path = "Target Support Files/Pods-DoctOPD (iOS)/Pods-DoctOPD (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		C38912413A4BA778EB7E279F /* Pods-DoctOPD (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctOPD (iOS).debug.xcconfig"; path = "Target Support Files/Pods-DoctOPD (iOS)/Pods-DoctOPD (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		DD0752B0267E14690098EB81 /* DoctOPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctOPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0752B3267E14690098EB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0752C0267E14690098EB81 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,19 @@
 		DD07531F267FD8470098EB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD075321267FD8470098EB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD075323267FD8470098EB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD07539E2681208E0098EB81 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		DD0753A2268120EA0098EB81 /* OnboardingFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirstViewController.swift; sourceTree = "<group>"; };
+		DD0753A6268120FE0098EB81 /* OnboardingSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondViewController.swift; sourceTree = "<group>"; };
+		DD0753AA2681210D0098EB81 /* OnboardingThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThirdViewController.swift; sourceTree = "<group>"; };
+		DD0753AE2681212A0098EB81 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		DD0753B22681288E0098EB81 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		DD0753C8268146960098EB81 /* OPTUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTUtilities.swift; sourceTree = "<group>"; };
+		DD0753C9268146960098EB81 /* OPTAPPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTAPPConstants.swift; sourceTree = "<group>"; };
+		DD0753CB268146970098EB81 /* OPTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTViewController.swift; sourceTree = "<group>"; };
+		DD0753CC268146970098EB81 /* OPTServerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTServerConstants.swift; sourceTree = "<group>"; };
+		DD0753CD268146970098EB81 /* OPTUtilityExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTUtilityExtension.swift; sourceTree = "<group>"; };
+		DD0753D826814D290098EB81 /* TextFieldValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidations.swift; sourceTree = "<group>"; };
+		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B73E3B0EF7143095DA0A6E /* Pods_DoctOPD__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +89,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426A2739FDC13D1D2143A77A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D800D83C6A95D2219E5D245 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38912413A4BA778EB7E279F /* Pods-DoctOPD (iOS).debug.xcconfig */,
+				18BE9DE488F7CDD322595679 /* Pods-DoctOPD (iOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD0752A3267E14650098EB81 = {
 			isa = PBXGroup;
 			children = (
 				DD0752B2267E14690098EB81 /* iOS */,
 				DD0752C3267E14690098EB81 /* Tests iOS */,
 				DD0752B1267E14690098EB81 /* Products */,
+				5D800D83C6A95D2219E5D245 /* Pods */,
+				426A2739FDC13D1D2143A77A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +129,8 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD0753C7268146890098EB81 /* Utility */,
+				DD07539D268120250098EB81 /* Onboarding */,
 				DD07531C267FD8470098EB81 /* Resources */,
 				DD075307267E16B50098EB81 /* AppDelegate */,
 				DD0752F7267E159D0098EB81 /* Storyboards */,
@@ -120,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				DD0752FC267E161C0098EB81 /* SignUp.storyboard */,
+				DD0753AE2681212A0098EB81 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -150,6 +201,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DD07539D268120250098EB81 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DD07539E2681208E0098EB81 /* OnboardingPageViewController.swift */,
+				DD0753A2268120EA0098EB81 /* OnboardingFirstViewController.swift */,
+				DD0753A6268120FE0098EB81 /* OnboardingSecondViewController.swift */,
+				DD0753AA2681210D0098EB81 /* OnboardingThirdViewController.swift */,
+				DD0753B22681288E0098EB81 /* PageControlViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DD0753C7268146890098EB81 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DD0753C9268146960098EB81 /* OPTAPPConstants.swift */,
+				DD0753CC268146970098EB81 /* OPTServerConstants.swift */,
+				DD0753C8268146960098EB81 /* OPTUtilities.swift */,
+				DD0753CD268146970098EB81 /* OPTUtilityExtension.swift */,
+				DD0753CB268146970098EB81 /* OPTViewController.swift */,
+				DD0753D826814D290098EB81 /* TextFieldValidations.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD0752DA267E14690098EB81 /* Build configuration list for PBXNativeTarget "DoctOPD (iOS)" */;
 			buildPhases = (
+				4FB5303D3F141DF39FAAAFD3 /* [CP] Check Pods Manifest.lock */,
 				DD0752AC267E14690098EB81 /* Sources */,
 				DD0752AD267E14690098EB81 /* Frameworks */,
 				DD0752AE267E14690098EB81 /* Resources */,
+				AE339B8484C03EE7A6AC79CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */,
+				DD0753AF2681212A0098EB81 /* Onboarding.storyboard in Resources */,
 				DD075353267FD8480098EB81 /* Main.storyboard in Resources */,
 				DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */,
 				DD075351267FD8470098EB81 /* Assets.xcassets in Resources */,
@@ -246,14 +325,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FB5303D3F141DF39FAAAFD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctOPD (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE339B8484C03EE7A6AC79CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctOPD (iOS)/Pods-DoctOPD (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoctOPD (iOS)/Pods-DoctOPD (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoctOPD (iOS)/Pods-DoctOPD (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD0752AC267E14690098EB81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD07539F2681208E0098EB81 /* OnboardingPageViewController.swift in Sources */,
+				DD0753AB2681210D0098EB81 /* OnboardingThirdViewController.swift in Sources */,
+				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
+				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
+				DD0753D926814D290098EB81 /* TextFieldValidations.swift in Sources */,
+				DD0753CF268146970098EB81 /* OPTAPPConstants.swift in Sources */,
+				DD0753D3268146970098EB81 /* OPTUtilityExtension.swift in Sources */,
 				DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */,
 				DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */,
+				DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
+				DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */,
+				DD0753A3268120EA0098EB81 /* OnboardingFirstViewController.swift in Sources */,
+				DD0753B32681288E0098EB81 /* PageControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +540,7 @@
 		};
 		DD0752DB267E14690098EB81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38912413A4BA778EB7E279F /* Pods-DoctOPD (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -429,6 +562,7 @@
 		};
 		DD0752DC267E14690098EB81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BE9DE488F7CDD322595679 /* Pods-DoctOPD (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
