@@ -9,8 +9,13 @@ import UIKit
 
 class OnboardingSecondViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = APPConstants.OnBoardingTitles.TITLE2
+        subTitleLabel.text = APPConstants.OnBoardingSubTitles.SUBTITLE2
 
         // Do any additional setup after loading the view.
     }

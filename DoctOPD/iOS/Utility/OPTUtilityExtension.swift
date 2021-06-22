@@ -58,16 +58,16 @@ extension String {
         return self
     }
     var htmlToAttributedString: NSAttributedString? {
-        guard let data = data(using: .utf8) else { return nil }
-        do {
-           let attribStr = try NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-            let textRangeForFont: NSRange = NSMakeRange(0, attribStr.length)
-            attribStr.addAttributes([NSAttributedString.Key.font: UIFont(name: APPConstants.Font.GOTHAM_BOOK, size: 14.0) ?? UIFont()], range: textRangeForFont)
-            return attribStr
-        } catch {
-            return nil
+            guard let data = data(using: .utf8) else { return nil }
+            do {
+                return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+            } catch {
+                return nil
+            }
         }
-    }
+        var htmlToString: String {
+            return htmlToAttributedString?.string ?? ""
+        }
 }
 extension UINavigationItem {
     func setTitle(_ title: String, subtitle: String) {

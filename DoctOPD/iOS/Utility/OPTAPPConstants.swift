@@ -51,6 +51,30 @@ struct APPConstants {
 
     }
     
+    struct SignUpScreen {
+        static let OTP_SCREEN = "OTPViewController"
+        static let Password_SCREEN = "PasswordViewController"
+        static let SignUp_SCREEN = "SignUpViewController"
+        static let NAME_FIELD_PLACEHOLDER = "Enter Name"
+        static let EMAIL_FIELD_PLACEHOLDER = "Enter Email"
+        static let PASSWORD_FIELD_PLACEHOLDER = "Create Password"
+        static let Enter_ValidPassword_Placeholder = "Enter password between 4 and 10 alphanumeric characters"
+        static let Enter_ValidEmail_Placeholder = "Enter a valid email address"
+        static let Enter_ValidName_Placeholder = "Enter atleast 3 characters"
+    }
+    
+    struct TabBarScreen {
+        static let TABBAR_CONTROLLER = "TabBarContollerClass"
+    }
+    
+    struct OTPScreen {
+        static let Enter_Code_Msg = "Please enter the 4-digit code sent to you at "
+    }
+    
+    struct PasswordScreen {
+        static let Enter_Password_Placeholder = "Enter Password"
+    }
+    
     struct DetailsScreen {
         static let ORDER_DETAILS_SCREEN = "OPTOrderDetailsViewController"
         static let CUSTOMERDETAILS = "OPTCustomerDetailsViewController"
@@ -167,8 +191,13 @@ struct APPConstants {
     struct Colors {
         static let PRIMARY_COLOR = UIColor(displayP3Red: 9.0 / 256.0, green: 40.0 / 256.0, blue: 80.0 / 256.0, alpha: 1.0)
         static let STEPPER_COLOR = UIColor(displayP3Red: 48.0 / 256.0, green: 113.0 / 256.0, blue: 186.0 / 256.0, alpha: 1.0)
-        static let BORDER_COLOR = UIColor(red: 199.0 / 255.0, green: 220.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
+        static let BORDER_COLOR = UIColor(red: 195.0 / 255.0, green: 217.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0)
+        static let VALID_TF_BG_COLOR = UIColor(red: 234.0 / 255.0, green: 242.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
         static let BUTTON_BG_COLOR = UIColor(red: 57.0 / 255.0, green: 93.0 / 255.0, blue: 236.0 / 255.0, alpha: 1.0)
+        static let OTP_BG_COLOR = UIColor(red: 229.0 / 255.0, green: 240.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
+        static let OTP_BORDER_COLOR = UIColor(red: 181.0 / 255.0, green: 208.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
+        static let TEXT_COLOR = UIColor(red: 9.0 / 255.0, green: 9.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
+
     }
     
     struct Notification {
@@ -217,11 +246,31 @@ struct APPConstants {
     enum StoryboardIdentifiers {
         static let MAIN = "Main"
         static let ONBOARDING = "Onboarding"
+        static let SIGNUP = "SignUp"
+        static let TABBAR = "Tabbar"
         static let DETAILS = "OPTDetails"
         static let CUSTOMER_DETAILS = "OPTCustomer"
         static let INVENTORY_STORYBOARD = "OPTInventory"
         static let SUPPORT_MAINTENANCE_STORYBOARD = "OPTSupportMaintenance"
     }
+    
+    enum UserRegistrationStatus {
+        case NotRegistered
+        case AlreadyRegistered
+    }
+    
+    enum COMMON_VALIDATION: String {
+        case EMPETY_FIELD   =   "Field can't be blank"
+        case NO_INTERNET    =   "No network connection. Please connect to the internet"
+        case ERROR_MSG      =   "Somthing went wrong. Please try again..."
+        case DELETE         =   "Delete"
+        case CANCEL         =   "Cancel"
+        case LOGOUT         =   "Logout"
+        case REPLYALL       =   "Reply"
+        case FORWOARDALL    =   "Forword"
+        case LEAVE          =   "Leave"
+    }
+    
     enum SegueIdentifier {
         static let INTIAL_VIEW_CONTROLLER = "OPTInitialViewController"
         static let TNC_VIEW_CONTROLLER = "OPTTNCViewController"
@@ -1143,4 +1192,20 @@ struct APPConstants {
         static let OFFLINE = "OFFLINE (%d)"
         static let ALL = "ALL (%d)"
     }
+    
+    struct OnBoardingTitles {
+        static let TITLE1 = "Do you want to get rid of your health policy Renewal premium?\nor\nAre you fed up with your OPD expenses?"
+        static let TITLE2 = "You can take the health policies of all these companies or renew them."
+        static let TITLE3 = "Say Hello, to \nyour healthcare partner"
+       
+    }
+    
+    struct OnBoardingSubTitles {
+        static let SUBTITLE1 = "The year 2020 was a year full of ups and downs in terms of the health of the people of the whole world. Many countries of the world and their governments faced a new challenge. There was a lot of chaos in every place, in which things were seen, the government felt the need to make significant reforms on its policy rules and budget all over.\n\nIn this series, many new schemes were also started in our country India. My aim to make this application is whether we can do something as a responsible citizen so that we can serve the people of our country, giving importance to this service, this application was conceived.\n\nDoctOPD is India\'s first mobile application dedicated to all consumers. You are all our brand ambassadors, not dignitaries like Virat Kohli, Amitabh Bachchan who are successful in their respective fields.\n\n\nI (\"DoctOPD\") believe that all of you are a successful and prosperous person in your life. \"You are the whole world for your family, on the contrary, you are just a human being for this world\", so we understand your importance and wish you all good health.\n\n\nThis Privacy Policy is defined by the terms of how we collect, use, share, disclose and protect personal information about users of services, including practitioners. We have protected your privacy. And has created this Privacy Policy to demonstrate our commitment to protecting your personal information. Use and use of your services are subject to this Privacy Policy and our Terms of Use. None of the terms used in the privacy policy are defined. But in whose terms of our usage will the meaning be attributed to it.\n\nAs Doctopd expands and we can change our policies so please check this from time to time. By downloading the DoctOPD app, you automatically give us your consent to collect and store the information provided by us. This can be accessed through the following weblink. https://doctopd.com/privacy. So now you can get rid of this tension.\nFor this, all you have to do is to download this application with the code given to you as many people as possible, and you have to renew your current health policy through us.\nIf you have already taken a health policy through us, then you can take full advantage of this application.\nOur goal is to get rid of these two burdens of yours.\nWhy haven\'t you taken a claim any year or not?\nYou can get this benefit from the first Renewal of your policy, only you have to download this application on the mobile of maximum people. The more you download this application to other people, the more points you will earn, along with this you will be given a point equal to the amount of your health policy premium, not only this, but you will also be given an additional point, which will be given to you from time to time. The download will be according to the usage of the rented application. That is, we will give you this amount according to a fixed calculation in the same proportion by mixing your total earned points. And you can use this money to get rid of the tension of your policy\'s Renewal premium, or you can recover the money spent on your OPD with this money.\nNote: To redeem all your earned points, you have to take or renew a health policy from us."
+        static let SUBTITLE2 = "HDFC ERGO\nStar health\nICICI LOMBARD\nReligare\nTata Aig\nMax Bupa\nAditya Birla\nReliance\nUniversal\nManipal Cigna \nRoyal Sundaram \nNew India \nNational \nUnited \nIffco Tokio \nHdfc Ergo ( Apollo Munich) \nSbi General\nOriental"
+        static let SUBTITLE3 = "1000+ Doctors, 200 + Clinics,\n 120 + Hospitals"
+       
+    }
+    
+    
 }

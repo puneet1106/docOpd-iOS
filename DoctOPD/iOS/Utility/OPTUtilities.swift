@@ -15,6 +15,11 @@ protocol SubmitDataDelegate: class {
 final class OPTUtilities: NSObject {
     private let jsonDecoder = JSONDecoder()
     var sideMenuCustData: [String] = []
+    var AppObject:AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     class var sharedInstance: OPTUtilities {
         struct Singleton {
             static let instance = OPTUtilities()
@@ -178,7 +183,7 @@ final class OPTUtilities: NSObject {
             let emailPred = NSPredicate(format: APPConstants.REGEX.SELF_MATCHES, emailRegEx)
             return emailPred.evaluate(with: email)
         }
-        return true
+        return false
     }
     func compareSelectedDate(firstDateStr: String, secondDateStr: String) -> Bool {
         let dateFormatter = DateFormatter()

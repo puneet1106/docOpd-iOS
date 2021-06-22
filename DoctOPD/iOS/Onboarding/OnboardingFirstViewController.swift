@@ -9,9 +9,13 @@ import UIKit
 
 class OnboardingFirstViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = APPConstants.OnBoardingTitles.TITLE1
+        subTitleLabel.text = APPConstants.OnBoardingSubTitles.SUBTITLE1
         // Do any additional setup after loading the view.
     }
     

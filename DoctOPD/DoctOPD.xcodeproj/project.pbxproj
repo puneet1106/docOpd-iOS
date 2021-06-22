@@ -28,6 +28,23 @@
 		DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753CC268146970098EB81 /* OPTServerConstants.swift */; };
 		DD0753D3268146970098EB81 /* OPTUtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753CD268146970098EB81 /* OPTUtilityExtension.swift */; };
 		DD0753D926814D290098EB81 /* TextFieldValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0753D826814D290098EB81 /* TextFieldValidations.swift */; };
+		DD07541D2681D5E60098EB81 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07541C2681D5E60098EB81 /* SignUpViewModel.swift */; };
+		DD0754212681D6610098EB81 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0754202681D6610098EB81 /* Reach.swift */; };
+		DD07542F2681DCD80098EB81 /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07542D2681DCD80098EB81 /* GSMessage.swift */; };
+		DD0754302681DCD80098EB81 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = DD07542E2681DCD80098EB81 /* UIView+Toast.m */; };
+		DD075446268221FE0098EB81 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075445268221FE0098EB81 /* OTPTextField.swift */; };
+		DD07544C268222310098EB81 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07544B268222310098EB81 /* OTPStackView.swift */; };
+		DD0754502682246E0098EB81 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07544F2682246E0098EB81 /* OTPViewController.swift */; };
+		DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0754532682734D0098EB81 /* PasswordViewController.swift */; };
+		DD07545826827A320098EB81 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07545726827A320098EB81 /* OTPViewModel.swift */; };
+		DD07545C26827A450098EB81 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07545B26827A450098EB81 /* PasswordViewModel.swift */; };
+		DD07546026827A520098EB81 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07545F26827A520098EB81 /* OTPModel.swift */; };
+		DD07546426827A5E0098EB81 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07546326827A5E0098EB81 /* PasswordModel.swift */; };
+		DD075468268285460098EB81 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075467268285460098EB81 /* SignInViewController.swift */; };
+		DD07546C268285A00098EB81 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07546B268285A00098EB81 /* SignInViewModel.swift */; };
+		DD075470268285C30098EB81 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07546F268285C30098EB81 /* SignInModel.swift */; };
+		DD0754742682A2AA0098EB81 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0754732682A2A90098EB81 /* Tabbar.storyboard */; };
+		DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +84,24 @@
 		DD0753CC268146970098EB81 /* OPTServerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTServerConstants.swift; sourceTree = "<group>"; };
 		DD0753CD268146970098EB81 /* OPTUtilityExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTUtilityExtension.swift; sourceTree = "<group>"; };
 		DD0753D826814D290098EB81 /* TextFieldValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidations.swift; sourceTree = "<group>"; };
+		DD07541C2681D5E60098EB81 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DD0754202681D6610098EB81 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		DD07542C2681DCD80098EB81 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		DD07542D2681DCD80098EB81 /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
+		DD07542E2681DCD80098EB81 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		DD075445268221FE0098EB81 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		DD07544B268222310098EB81 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
+		DD07544F2682246E0098EB81 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		DD0754532682734D0098EB81 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		DD07545726827A320098EB81 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		DD07545B26827A450098EB81 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		DD07545F26827A520098EB81 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
+		DD07546326827A5E0098EB81 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
+		DD075467268285460098EB81 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DD07546B268285A00098EB81 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		DD07546F268285C30098EB81 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		DD0754732682A2A90098EB81 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContollerClass.swift; sourceTree = "<group>"; };
 		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +164,9 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD0754772682A5A40098EB81 /* TabBar */,
+				DD075443268221D20098EB81 /* CustomViews */,
+				DD07542A2681DCC50098EB81 /* ThirdPartLibrary */,
 				DD0753C7268146890098EB81 /* Utility */,
 				DD07539D268120250098EB81 /* Onboarding */,
 				DD07531C267FD8470098EB81 /* Resources */,
@@ -152,6 +190,7 @@
 		DD0752F3267E15690098EB81 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				DD07541B2681D5C30098EB81 /* ViewModel */,
 				DD075312267FD52F0098EB81 /* Model */,
 				DD0752F4267E157E0098EB81 /* Controller */,
 			);
@@ -162,6 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				DD075300267E16460098EB81 /* SignUpViewController.swift */,
+				DD075467268285460098EB81 /* SignInViewController.swift */,
+				DD07544F2682246E0098EB81 /* OTPViewController.swift */,
+				DD0754532682734D0098EB81 /* PasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +213,7 @@
 			children = (
 				DD0752FC267E161C0098EB81 /* SignUp.storyboard */,
 				DD0753AE2681212A0098EB81 /* Onboarding.storyboard */,
+				DD0754732682A2A90098EB81 /* Tabbar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -187,6 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				DD075313267FD5750098EB81 /* SignUpModel.swift */,
+				DD07546F268285C30098EB81 /* SignInModel.swift */,
+				DD07545F26827A520098EB81 /* OTPModel.swift */,
+				DD07546326827A5E0098EB81 /* PasswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +262,7 @@
 		DD0753C7268146890098EB81 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DD0754202681D6610098EB81 /* Reach.swift */,
 				DD0753C9268146960098EB81 /* OPTAPPConstants.swift */,
 				DD0753CC268146970098EB81 /* OPTServerConstants.swift */,
 				DD0753C8268146960098EB81 /* OPTUtilities.swift */,
@@ -224,6 +271,60 @@
 				DD0753D826814D290098EB81 /* TextFieldValidations.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		DD07541B2681D5C30098EB81 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD07541C2681D5E60098EB81 /* SignUpViewModel.swift */,
+				DD07545726827A320098EB81 /* OTPViewModel.swift */,
+				DD07545B26827A450098EB81 /* PasswordViewModel.swift */,
+				DD07546B268285A00098EB81 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD07542A2681DCC50098EB81 /* ThirdPartLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				DD07542B2681DCD80098EB81 /* Tost3rd Party Classes */,
+			);
+			path = ThirdPartLibrary;
+			sourceTree = "<group>";
+		};
+		DD07542B2681DCD80098EB81 /* Tost3rd Party Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DD07542C2681DCD80098EB81 /* UIView+Toast.h */,
+				DD07542D2681DCD80098EB81 /* GSMessage.swift */,
+				DD07542E2681DCD80098EB81 /* UIView+Toast.m */,
+			);
+			path = "Tost3rd Party Classes";
+			sourceTree = "<group>";
+		};
+		DD075443268221D20098EB81 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD075444268221DA0098EB81 /* OTPView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DD075444268221DA0098EB81 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				DD075445268221FE0098EB81 /* OTPTextField.swift */,
+				DD07544B268222310098EB81 /* OTPStackView.swift */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		DD0754772682A5A40098EB81 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0754742682A2AA0098EB81 /* Tabbar.storyboard in Resources */,
 				DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */,
 				DD0753AF2681212A0098EB81 /* Onboarding.storyboard in Resources */,
 				DD075353267FD8480098EB81 /* Main.storyboard in Resources */,
@@ -372,18 +474,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0754302681DCD80098EB81 /* UIView+Toast.m in Sources */,
+				DD07545C26827A450098EB81 /* PasswordViewModel.swift in Sources */,
+				DD07546426827A5E0098EB81 /* PasswordModel.swift in Sources */,
+				DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */,
 				DD07539F2681208E0098EB81 /* OnboardingPageViewController.swift in Sources */,
 				DD0753AB2681210D0098EB81 /* OnboardingThirdViewController.swift in Sources */,
+				DD075470268285C30098EB81 /* SignInModel.swift in Sources */,
+				DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */,
 				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
 				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
+				DD07546C268285A00098EB81 /* SignInViewModel.swift in Sources */,
+				DD075446268221FE0098EB81 /* OTPTextField.swift in Sources */,
 				DD0753D926814D290098EB81 /* TextFieldValidations.swift in Sources */,
 				DD0753CF268146970098EB81 /* OPTAPPConstants.swift in Sources */,
 				DD0753D3268146970098EB81 /* OPTUtilityExtension.swift in Sources */,
+				DD07542F2681DCD80098EB81 /* GSMessage.swift in Sources */,
+				DD07541D2681D5E60098EB81 /* SignUpViewModel.swift in Sources */,
+				DD075468268285460098EB81 /* SignInViewController.swift in Sources */,
+				DD07546026827A520098EB81 /* OTPModel.swift in Sources */,
 				DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */,
+				DD0754502682246E0098EB81 /* OTPViewController.swift in Sources */,
+				DD07545826827A320098EB81 /* OTPViewModel.swift in Sources */,
+				DD0754212681D6610098EB81 /* Reach.swift in Sources */,
 				DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */,
 				DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
 				DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */,
+				DD07544C268222310098EB81 /* OTPStackView.swift in Sources */,
 				DD0753A3268120EA0098EB81 /* OnboardingFirstViewController.swift in Sources */,
 				DD0753B32681288E0098EB81 /* PageControlViewController.swift in Sources */,
 			);

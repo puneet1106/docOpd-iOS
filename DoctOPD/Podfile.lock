@@ -1,16 +1,28 @@
 PODS:
+  - Alamofire (4.9.1)
   - IQKeyboardManagerSwift (6.5.6)
+  - ReachabilitySwift (4.3.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - IQKeyboardManagerSwift
+  - ReachabilitySwift (~> 4.3.1)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IQKeyboardManagerSwift
+    - ReachabilitySwift
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 14f0451876aa9afb38b56b9263a2336dc107655c
+PODFILE CHECKSUM: 069fafc280ca8f8be9aaf6d10a12496a9809bbe0
 
 COCOAPODS: 1.10.1

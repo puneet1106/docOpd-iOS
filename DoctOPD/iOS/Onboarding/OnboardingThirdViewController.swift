@@ -9,8 +9,13 @@ import UIKit
 
 class OnboardingThirdViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = APPConstants.OnBoardingTitles.TITLE3
+        subTitleLabel.text = APPConstants.OnBoardingSubTitles.SUBTITLE3
 
         // Do any additional setup after loading the view.
     }

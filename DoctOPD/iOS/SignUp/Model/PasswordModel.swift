@@ -1,14 +1,13 @@
 //
-//  SignUpModel.swift
+//  PasswordModel.swift
 //  DoctOPD (iOS)
 //
-//  Created by Puneet on 21/06/21.
+//  Created by Puneet on 23/06/21.
 //
-
 
 import Foundation
 
-struct SignUpModel: Codable {
+struct PasswordModel: Codable {
 
     var message: String?
     var status: Int?
@@ -19,7 +18,7 @@ struct SignUpModel: Codable {
         case status = "status"
         case user = "user"
     }
-
+    
 
      init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -28,4 +27,3 @@ struct SignUpModel: Codable {
         self.user = try container.decodeIfPresent(UserModel.self, forKey: .user)
     }
 }
-
