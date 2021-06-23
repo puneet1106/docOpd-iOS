@@ -101,7 +101,7 @@ class SignInViewController: UIViewController {
             return
         }
         
-        guard let requestUrl = URL(string: "http://www.doctopd.com/doctopd/api/send-otp") else {
+        guard let requestUrl = URL(string: APPConstants.APIPath.signIn) else {
            return
         }
         let requestParam : [String: String] = ["mobileNumber": phoneNumberTextField.text ?? ""]

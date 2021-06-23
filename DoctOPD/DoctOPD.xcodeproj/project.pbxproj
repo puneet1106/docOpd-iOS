@@ -45,6 +45,8 @@
 		DD075470268285C30098EB81 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07546F268285C30098EB81 /* SignInModel.swift */; };
 		DD0754742682A2AA0098EB81 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0754732682A2A90098EB81 /* Tabbar.storyboard */; };
 		DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */; };
+		DD07547F268351090098EB81 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07547E268351090098EB81 /* More.storyboard */; };
+		DD075486268351EB0098EB81 /* TermsCondition_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD075485268351EB0098EB81 /* TermsCondition_VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		DD07546F268285C30098EB81 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		DD0754732682A2A90098EB81 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContollerClass.swift; sourceTree = "<group>"; };
+		DD07547E268351090098EB81 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		DD075485268351EB0098EB81 /* TermsCondition_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsCondition_VC.swift; sourceTree = "<group>"; };
 		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,6 +168,7 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD075483268351CE0098EB81 /* TermsConditions */,
 				DD0754772682A5A40098EB81 /* TabBar */,
 				DD075443268221D20098EB81 /* CustomViews */,
 				DD07542A2681DCC50098EB81 /* ThirdPartLibrary */,
@@ -214,6 +219,7 @@
 				DD0752FC267E161C0098EB81 /* SignUp.storyboard */,
 				DD0753AE2681212A0098EB81 /* Onboarding.storyboard */,
 				DD0754732682A2A90098EB81 /* Tabbar.storyboard */,
+				DD07547E268351090098EB81 /* More.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -327,6 +333,22 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		DD075483268351CE0098EB81 /* TermsConditions */ = {
+			isa = PBXGroup;
+			children = (
+				DD075484268351DC0098EB81 /* ViewController */,
+			);
+			path = TermsConditions;
+			sourceTree = "<group>";
+		};
+		DD075484268351DC0098EB81 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD075485268351EB0098EB81 /* TermsCondition_VC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +433,7 @@
 			files = (
 				DD0754742682A2AA0098EB81 /* Tabbar.storyboard in Resources */,
 				DD0752FD267E161C0098EB81 /* SignUp.storyboard in Resources */,
+				DD07547F268351090098EB81 /* More.storyboard in Resources */,
 				DD0753AF2681212A0098EB81 /* Onboarding.storyboard in Resources */,
 				DD075353267FD8480098EB81 /* Main.storyboard in Resources */,
 				DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */,
@@ -483,6 +506,7 @@
 				DD075470268285C30098EB81 /* SignInModel.swift in Sources */,
 				DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */,
 				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
+				DD075486268351EB0098EB81 /* TermsCondition_VC.swift in Sources */,
 				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
 				DD07546C268285A00098EB81 /* SignInViewModel.swift in Sources */,
 				DD075446268221FE0098EB81 /* OTPTextField.swift in Sources */,

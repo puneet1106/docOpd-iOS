@@ -61,10 +61,18 @@ struct APPConstants {
         static let Enter_ValidPassword_Placeholder = "Enter password between 4 and 10 alphanumeric characters"
         static let Enter_ValidEmail_Placeholder = "Enter a valid email address"
         static let Enter_ValidName_Placeholder = "Enter atleast 3 characters"
+        static let Policy_Conditions_Text = "Please review and accept our Privacy Policy Terms & Conditions to continue"
+        static let Terms_Conditions_Text = "Terms & Conditions"
+        static let Privacy_Policy_Text = "Privacy Policy"
+
     }
     
     struct TabBarScreen {
         static let TABBAR_CONTROLLER = "TabBarContollerClass"
+    }
+    
+    struct TermsConditionScreen {
+        static let TermsCondition_Controller = "TermsCondition_VC"
     }
     
     struct OTPScreen {
@@ -197,6 +205,7 @@ struct APPConstants {
         static let OTP_BG_COLOR = UIColor(red: 229.0 / 255.0, green: 240.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
         static let OTP_BORDER_COLOR = UIColor(red: 181.0 / 255.0, green: 208.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
         static let TEXT_COLOR = UIColor(red: 9.0 / 255.0, green: 9.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
+        static let POLICY_CONDITIONS_COLOR = UIColor(displayP3Red: 16.0 / 256.0, green: 149.0 / 256.0, blue: 117.0 / 256.0, alpha: 1.0)
 
     }
     
@@ -246,6 +255,7 @@ struct APPConstants {
     enum StoryboardIdentifiers {
         static let MAIN = "Main"
         static let ONBOARDING = "Onboarding"
+        static let MORE = "More"
         static let SIGNUP = "SignUp"
         static let TABBAR = "Tabbar"
         static let DETAILS = "OPTDetails"
@@ -1207,5 +1217,15 @@ struct APPConstants {
        
     }
     
+    
+    struct APIPath {
+        static let signUp = "http://www.doctopd.com/doctopd/api/register"
+        static let signIn = "http://www.doctopd.com/doctopd/api/send-otp"
+        static let loginWithOTP = "http://www.doctopd.com/doctopd/api/verify-login"
+        static let loginWithPassword = "http://www.doctopd.com/doctopd/api/verify-login"
+        static let termsAndConditionsURL = "http://www.doctopd.com/static/html/termcondition.html"
+        static let privacyPolicyURL = "http://www.doctopd.com/static/html/privacy.html"
+
+    }
     
 }

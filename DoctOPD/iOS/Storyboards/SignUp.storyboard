@@ -395,8 +395,26 @@
                                             <constraint firstAttribute="width" constant="20" id="ZvX-Mz-tUi"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-7t-LFw">
+                                        <rect key="frame" x="20" y="395.5" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="526-Re-HDt"/>
+                                            <constraint firstAttribute="width" constant="28" id="vjD-T2-rch"/>
+                                        </constraints>
+                                        <state key="normal" image="checkBoxUnSelected"/>
+                                        <state key="selected" image="checkBoxSelected"/>
+                                        <connections>
+                                            <action selector="checkBoxAction:" destination="lau-zB-HZg" eventType="touchUpInside" id="hWQ-Ng-GUe"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJI-de-z7E">
+                                        <rect key="frame" x="68" y="395.5" width="287" height="18"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <color key="textColor" red="0.22745098039215686" green="0.34509803921568627" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ4-pk-gcs">
-                                        <rect key="frame" x="20" y="402.5" width="335" height="51"/>
+                                        <rect key="frame" x="20" y="445" width="335" height="51"/>
                                         <color key="backgroundColor" red="0.2274509804" green="0.34509803919999998" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="5uS-hj-znK"/>
@@ -414,14 +432,17 @@
                                 <constraints>
                                     <constraint firstItem="smH-IY-qdg" firstAttribute="trailing" secondItem="LOT-Yf-sUu" secondAttribute="trailing" id="6ai-90-qVd"/>
                                     <constraint firstItem="smH-IY-qdg" firstAttribute="leading" secondItem="LOT-Yf-sUu" secondAttribute="leading" id="76y-Wx-r3D"/>
+                                    <constraint firstItem="FJI-de-z7E" firstAttribute="leading" secondItem="lFv-7t-LFw" secondAttribute="trailing" constant="20" id="978-ri-cLj"/>
                                     <constraint firstItem="I4c-S2-B3K" firstAttribute="leading" secondItem="OB2-Cs-vgv" secondAttribute="leading" constant="20" symbolic="YES" id="BYh-U0-ykW"/>
                                     <constraint firstItem="OMB-x2-NrE" firstAttribute="trailing" secondItem="LOT-Yf-sUu" secondAttribute="trailing" constant="-5" id="GG1-WI-SoP"/>
+                                    <constraint firstItem="FJI-de-z7E" firstAttribute="top" secondItem="lFv-7t-LFw" secondAttribute="top" id="GK5-dh-YvY"/>
                                     <constraint firstItem="ugj-qW-g2v" firstAttribute="trailing" secondItem="smH-IY-qdg" secondAttribute="trailing" constant="-5" id="GUh-4P-Npc"/>
                                     <constraint firstItem="cZ4-pk-gcs" firstAttribute="trailing" secondItem="smH-IY-qdg" secondAttribute="trailing" id="HS5-af-n5b"/>
                                     <constraint firstItem="smH-IY-qdg" firstAttribute="top" secondItem="LOT-Yf-sUu" secondAttribute="bottom" constant="17" id="KyU-Q5-O0H"/>
-                                    <constraint firstItem="cZ4-pk-gcs" firstAttribute="top" secondItem="smH-IY-qdg" secondAttribute="bottom" constant="27" id="Ovv-zQ-UhH"/>
                                     <constraint firstAttribute="trailing" secondItem="I4c-S2-B3K" secondAttribute="trailing" constant="20" symbolic="YES" id="QWg-Hg-vt4"/>
                                     <constraint firstItem="PCC-J5-jNe" firstAttribute="centerY" secondItem="I4c-S2-B3K" secondAttribute="centerY" id="XKp-oD-Soj"/>
+                                    <constraint firstItem="lFv-7t-LFw" firstAttribute="top" secondItem="smH-IY-qdg" secondAttribute="bottom" constant="20" id="XTg-0p-ukL"/>
+                                    <constraint firstItem="lFv-7t-LFw" firstAttribute="leading" secondItem="smH-IY-qdg" secondAttribute="leading" id="aON-aQ-ETl"/>
                                     <constraint firstItem="o0b-rk-c9Z" firstAttribute="leading" secondItem="I4c-S2-B3K" secondAttribute="leading" id="baB-s1-bSr"/>
                                     <constraint firstItem="5dR-Be-Pyu" firstAttribute="centerX" secondItem="OB2-Cs-vgv" secondAttribute="centerX" id="blR-3E-FzM"/>
                                     <constraint firstItem="PCC-J5-jNe" firstAttribute="trailing" secondItem="I4c-S2-B3K" secondAttribute="trailing" constant="-5" id="bo0-nR-bY8"/>
@@ -436,6 +457,8 @@
                                     <constraint firstItem="ugj-qW-g2v" firstAttribute="centerY" secondItem="smH-IY-qdg" secondAttribute="centerY" id="m4t-TY-IGt"/>
                                     <constraint firstItem="5dR-Be-Pyu" firstAttribute="top" secondItem="OB2-Cs-vgv" secondAttribute="top" constant="70" id="mzx-bD-UuV"/>
                                     <constraint firstItem="LOT-Yf-sUu" firstAttribute="top" secondItem="o0b-rk-c9Z" secondAttribute="bottom" constant="17" id="ne3-DK-dwi"/>
+                                    <constraint firstItem="cZ4-pk-gcs" firstAttribute="top" secondItem="FJI-de-z7E" secondAttribute="bottom" constant="31.5" id="nra-of-34p"/>
+                                    <constraint firstAttribute="trailing" secondItem="FJI-de-z7E" secondAttribute="trailing" constant="20" id="qj9-ad-JrZ"/>
                                     <constraint firstItem="4nt-1B-S2c" firstAttribute="centerY" secondItem="o0b-rk-c9Z" secondAttribute="centerY" id="rGJ-9d-Rs9"/>
                                     <constraint firstItem="o0b-rk-c9Z" firstAttribute="top" secondItem="I4c-S2-B3K" secondAttribute="bottom" constant="17" id="tXB-C4-q1a"/>
                                 </constraints>
@@ -458,9 +481,12 @@
                             <constraint firstItem="OB2-Cs-vgv" firstAttribute="trailing" secondItem="Bms-2r-fEc" secondAttribute="trailing" id="moM-0l-HAw"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Hp7-Mz-cUc"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="btnRegister" destination="cZ4-pk-gcs" id="MPX-qD-mN1"/>
+                        <outlet property="checkBoxButton" destination="lFv-7t-LFw" id="GAm-XT-pbv"/>
                         <outlet property="emailTFImageView" destination="4nt-1B-S2c" id="3gQ-yS-Wr9"/>
                         <outlet property="emailTextField" destination="o0b-rk-c9Z" id="mNf-dL-crb"/>
                         <outlet property="nameTFImageView" destination="PCC-J5-jNe" id="G9P-Ns-YYY"/>
@@ -469,6 +495,7 @@
                         <outlet property="paswwordTFImageView" destination="ugj-qW-g2v" id="ZgG-dk-3Ed"/>
                         <outlet property="phoneNumberTFImageView" destination="OMB-x2-NrE" id="jVj-4f-CmO"/>
                         <outlet property="phoneNumberTextField" destination="LOT-Yf-sUu" id="vzq-pJ-7qh"/>
+                        <outlet property="termsCondtionsLabel" destination="FJI-de-z7E" id="0rg-yW-gML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ZB-HE-n5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -478,6 +505,8 @@
     </scenes>
     <resources>
         <image name="back" width="20" height="20"/>
+        <image name="checkBoxSelected" width="52" height="52"/>
+        <image name="checkBoxUnSelected" width="52" height="52"/>
         <image name="greentick" width="12" height="12"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

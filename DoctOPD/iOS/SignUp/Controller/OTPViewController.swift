@@ -126,7 +126,7 @@ class OTPViewController: UIViewController {
     }
     
      @IBAction func continueActn(_ sender: UIButton) {
-        guard let requestUrl = URL(string: "http://www.doctopd.com/doctopd/api/verify-login") else {
+        guard let requestUrl = URL(string: APPConstants.APIPath.loginWithOTP) else {
            return
         }
         

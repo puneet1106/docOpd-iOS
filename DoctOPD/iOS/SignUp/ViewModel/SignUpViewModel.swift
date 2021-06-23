@@ -75,19 +75,20 @@ class SignUpViewModel {
     
     //MARK: -- Example Func
     func bindSignUpData(requestUrl: URL, parameters:[String: String]) {
-        
+        print("requestUrl is \(requestUrl.absoluteString) and parameters are \(parameters)")
         switch Reach().connectionStatus() {
         case .offline:
             self.isDisconnected = true
             self.internetConnectionStatus?()
         case .online:
             self.isLoading = true
-            Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
+           
+            Alamofire.request(requestUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+                self.isLoading = false
                 switch response.result {
                 case .success:
                     let result = response.result.value
                     do {
-                        self.isLoading = false
                         let model = try JSONDecoder().decode(SignUpModel.self, from: response.data!)
                         print("model is\(model)")
                         self.model = model
@@ -95,11 +96,6 @@ class SignUpViewModel {
                     } catch let error as NSError {
                         print(String(describing: error))
                     }
-                    
-                    /*
-                     self?.isLoading = false
-                     self?.model = response
-                     self?.didGetData?()*/
                     print(result)
                 case .failure(let error):
                     let responseString = String(data: response.data ?? Data(), encoding:.utf8)

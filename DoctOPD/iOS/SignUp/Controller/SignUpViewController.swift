@@ -21,11 +21,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTFImageView: UIImageView!
     @IBOutlet weak var emailTFImageView: UIImageView!
     @IBOutlet weak var paswwordTFImageView: UIImageView!
-    
+    @IBOutlet weak var checkBoxButton: UIButton!
+    @IBOutlet weak var termsCondtionsLabel: UILabel!
+
     var isValidName: Bool = false
     var isValidEmail: Bool = false
     var isValidPassword: Bool = false
-
+    var isCheckBoxSelected: Bool = false
+    
     var contactNumber : String?
     var viewModel = SignUpViewModel()
     
@@ -71,7 +74,22 @@ class SignUpViewController: UIViewController {
         
         btnRegister.addBorderAndColor(color: APPConstants.Colors.BORDER_COLOR, width: 0.0, corner_radius: 5.0, clipsToBounds: true)
         btnRegister.backgroundColor = APPConstants.Colors.BUTTON_BG_COLOR
+        setUpAttributedString()
+    }
+    
+    
+    func setUpAttributedString(){
+        let text = APPConstants.SignUpScreen.Policy_Conditions_Text
+        termsCondtionsLabel.text = text
+        let underlineAttriString = NSMutableAttributedString(string: text)
+        let range1 = (text as NSString).range(of: APPConstants.SignUpScreen.Terms_Conditions_Text)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: APPConstants.Colors.POLICY_CONDITIONS_COLOR, range: range1)
         
+        let range2 = (text as NSString).range(of: APPConstants.SignUpScreen.Privacy_Policy_Text)
+        underlineAttriString.addAttribute(NSAttributedString.Key.foregroundColor, value: APPConstants.Colors.POLICY_CONDITIONS_COLOR, range: range2)
+        termsCondtionsLabel.attributedText = underlineAttriString
+        termsCondtionsLabel.isUserInteractionEnabled = true
+        termsCondtionsLabel.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel(gesture:))))
     }
     
     fileprivate func setupViewModel() {
@@ -125,6 +143,29 @@ class SignUpViewController: UIViewController {
         OPTUtilities.sharedInstance.AppObject.window?.rootViewController = newView
     }
     
+    func goToTermsConditionVC(title: String, urlStr: String) {
+        let storyboard : UIStoryboard   =   UIStoryboard(name: APPConstants.StoryboardIdentifiers.MORE, bundle: nil)
+        let vc  =   storyboard.instantiateViewController(withIdentifier: APPConstants.TermsConditionScreen.TermsCondition_Controller) as! TermsCondition_VC
+        vc.openUrl  =   urlStr
+        vc.navigationtitle  = title
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func checkBoxAction(_ sender: UIButton) {
+        checkBoxButton.isSelected = !checkBoxButton.isSelected
+    }
+    
+    @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
+        guard let text = self.termsCondtionsLabel.text else { return }
+        let privacyPolicyRange = (text as NSString).range(of: APPConstants.SignUpScreen.Privacy_Policy_Text)
+        let termsAndConditionRange = (text as NSString).range(of: APPConstants.SignUpScreen.Terms_Conditions_Text)
+        if gesture.didTapAttributedTextInLabel(label: self.termsCondtionsLabel, inRange: privacyPolicyRange) {
+            self.goToTermsConditionVC(title: APPConstants.SignUpScreen.Privacy_Policy_Text, urlStr:APPConstants.APIPath.privacyPolicyURL)
+        } else if gesture.didTapAttributedTextInLabel(label: self.termsCondtionsLabel, inRange: termsAndConditionRange){
+            self.goToTermsConditionVC(title: APPConstants.SignUpScreen.Terms_Conditions_Text, urlStr: APPConstants.APIPath.termsAndConditionsURL)
+        }
+    }
+    
     @IBAction func registerBtnActn(_ sender: UIButton) {
         
         if !isValidName {
@@ -136,13 +177,16 @@ class SignUpViewController: UIViewController {
         } else if !isValidPassword {
             self.showMessage(APPConstants.SignUpScreen.Enter_ValidPassword_Placeholder, type: .info)
             return
+        } else if !checkBoxButton.isSelected {
+            self.showMessage(APPConstants.SignUpScreen.Policy_Conditions_Text, type: .info)
+            return
         }
         
-        guard let requestUrl = URL(string: "http://www.doctopd.com/doctopd/api/register") else {
+        guard let requestUrl = URL(string: APPConstants.APIPath.signUp) else {
             return
         }
        
-        let requestParam : [String: String] = ["mobileNumber": contactNumber ?? UserDefaults.standard.value(forKey: "phoneNumber") as! String, "name": self.nameTextField.text!, "email": self.emailTextField.text!, "Password": self.passwordTextField.text!, "source": "iOS", "referralInviteCode": ""]
+        let requestParam : [String: String] = ["mobileNumber": contactNumber ?? UserDefaults.standard.value(forKey: "phoneNumber") as! String, "name": self.nameTextField.text!, "email": self.emailTextField.text!, "password": self.passwordTextField.text!, "source": "ANDRD","referralInviteCode": ""]
         
         viewModel.bindSignUpData(requestUrl: requestUrl, parameters: requestParam)
         
@@ -201,4 +245,38 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+extension UITapGestureRecognizer {
+    
+    func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
+         // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
+         let layoutManager = NSLayoutManager()
+         let textContainer = NSTextContainer(size: CGSize.zero)
+         let textStorage = NSTextStorage(attributedString: label.attributedText!)
+
+         // Configure layoutManager and textStorage
+         layoutManager.addTextContainer(textContainer)
+         textStorage.addLayoutManager(layoutManager)
+
+         // Configure textContainer
+         textContainer.lineFragmentPadding = 0.0
+         textContainer.lineBreakMode = label.lineBreakMode
+         textContainer.maximumNumberOfLines = label.numberOfLines
+         let labelSize = label.bounds.size
+         textContainer.size = labelSize
+
+         // Find the tapped character location and compare it to the specified range
+         let locationOfTouchInLabel = self.location(in: label)
+         let textBoundingBox = layoutManager.usedRect(for: textContainer)
+         //let textContainerOffset = CGPointMake((labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x,
+                                               //(labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
+         let textContainerOffset = CGPoint(x: (labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x, y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y)
+
+         //let locationOfTouchInTextContainer = CGPointMake(locationOfTouchInLabel.x - textContainerOffset.x,
+                                                         // locationOfTouchInLabel.y - textContainerOffset.y);
+         let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
+         let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+         return NSLocationInRange(indexOfCharacter, targetRange)
+     }
 }

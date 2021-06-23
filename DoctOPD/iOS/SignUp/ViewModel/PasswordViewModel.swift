@@ -82,12 +82,14 @@ class PasswordViewModel {
             self.internetConnectionStatus?()
         case .online:
             self.isLoading = true
+            
+            
             Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
+                self.isLoading = false
                 switch response.result {
                 case .success:
                     print("result is \(String(describing: response.result.value))")
                     do {
-                        self.isLoading = false
                         let model = try JSONDecoder().decode(PasswordModel.self, from: response.data!)
                         print("model is\(model)")
                         self.model = model
