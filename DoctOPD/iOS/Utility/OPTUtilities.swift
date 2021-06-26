@@ -415,4 +415,15 @@ extension UIView {
         self.layer.cornerRadius = corner_radius
         self.clipsToBounds = clipsToBounds
     }
+    
+    func dropShadow(x: CGFloat, y: CGFloat, shadowColor: UIColor, opacity: Float, radius: CGFloat) {
+           layer.masksToBounds = false
+           layer.shadowColor = shadowColor.cgColor
+           layer.shadowOpacity = opacity
+           layer.shadowOffset = CGSize(width: x, height: y)
+           layer.shadowRadius = radius
+           layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+           layer.shouldRasterize = true
+           layer.rasterizationScale = UIScreen.main.scale
+       }
 }

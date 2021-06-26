@@ -69,6 +69,11 @@ struct APPConstants {
     
     struct TabBarScreen {
         static let TABBAR_CONTROLLER = "TabBarContollerClass"
+        static let HOME_SCREEN = "HomeViewController"
+    }
+    
+    struct ProfileScreen {
+        static let DOCTOR_INFO_SCREEN = "DoctorProfileViewController"
     }
     
     struct TermsConditionScreen {
@@ -206,6 +211,11 @@ struct APPConstants {
         static let OTP_BORDER_COLOR = UIColor(red: 181.0 / 255.0, green: 208.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
         static let TEXT_COLOR = UIColor(red: 9.0 / 255.0, green: 9.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
         static let POLICY_CONDITIONS_COLOR = UIColor(displayP3Red: 16.0 / 256.0, green: 149.0 / 256.0, blue: 117.0 / 256.0, alpha: 1.0)
+        static let INSURANCE_BUTTON_BORDER_COLOR = UIColor(red: 62.0 / 256.0, green: 91.0 / 256.0, blue: 244.0 / 256.0, alpha: 1.0)
+        static let SHADOW_COLOR = UIColor(red: 206.0 / 256.0, green: 219.0 / 256.0, blue: 239.0 / 256.0, alpha: 1.0)
+        static let CATEGORY_CELL_SHADOW_COLOR = UIColor(red: 219.0 / 256.0, green: 228.0 / 256.0, blue: 242.0 / 256.0, alpha: 1.0)
+
+
 
     }
     
@@ -258,7 +268,7 @@ struct APPConstants {
         static let MORE = "More"
         static let SIGNUP = "SignUp"
         static let TABBAR = "Tabbar"
-        static let DETAILS = "OPTDetails"
+        static let PROFILE = "Profile"
         static let CUSTOMER_DETAILS = "OPTCustomer"
         static let INVENTORY_STORYBOARD = "OPTInventory"
         static let SUPPORT_MAINTENANCE_STORYBOARD = "OPTSupportMaintenance"
@@ -1225,7 +1235,22 @@ struct APPConstants {
         static let loginWithPassword = "http://www.doctopd.com/doctopd/api/verify-login"
         static let termsAndConditionsURL = "http://www.doctopd.com/static/html/termcondition.html"
         static let privacyPolicyURL = "http://www.doctopd.com/static/html/privacy.html"
+        static let getCategoryList = "http://www.doctopd.com/doctopd/api/get-category"
+        static let getShortlistedDoctorList = "http://www.doctopd.com/doctopd/api/get-shortlisted-doctor"
+        static let doctorImagePathURL = "http://www.doctopd.com/static/images/doctor/"
+        static let getDoctorInfo = "http://www.doctopd.com/doctopd/api/get-doctor-details"
+    }
+    
+    struct HomeInsuranceScreenInfoSection {
+        static let insurance_txt = "Do you want OPD expenses in your health policy, without any Extra Premium."
+        static let banner1 = "Dr. Sanjay Garg \nM.S., M.Ch(Urology) \nConsultant Urologist & Andrologist \n(+91) 9999489486"
+        static let banner2 = "A small step today for a better tomorrow! Amid the pandemic, don\'t forget to insure with HDFC ERGO Corona Kavach covering hospitalization expenses for COVID-19 and related illnesses. Click here to insure now."
+        static let banner3 = "Dr Praveen kumar \nHod, Dental  \nJaypee Hospital,  Noida"
+        static let banner4 = "You made us 1.5 crore strong! HDFC ERGO can\'t thank you enough for showing trust & so much faith in us. Click here to stay secured with HDFC ERGO."
+        static let banner5 = "A single solution for all your problems! Download HDFC ERGO app to find your policy copy, renew your policy & check the status of your claims in a jiffy! Download the app now."
 
     }
+    
+    
     
 }

@@ -91,6 +91,10 @@ class OTPViewModel {
                         
                         let model = try JSONDecoder().decode(OTPModel.self, from: response.data!)
                         print("model is\(model)")
+                        if let userId = model.user?.userId {
+                            UserDefaults.standard.setValue(userId, forKey: "userId")
+                            UserDefaults.standard.synchronize()
+                        }
                         self.model = model
                         self.didGetData?()
                     } catch let error as NSError {
