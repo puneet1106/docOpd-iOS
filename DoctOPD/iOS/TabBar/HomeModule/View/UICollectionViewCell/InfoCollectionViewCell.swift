@@ -25,8 +25,6 @@ class InfoCollectionViewCell: UICollectionViewCell {
         yesButton.addBorderAndColor(color: APPConstants.Colors.INSURANCE_BUTTON_BORDER_COLOR, width: 1.0, corner_radius: 15.0, clipsToBounds: true)
         noButton.addBorderAndColor(color: APPConstants.Colors.INSURANCE_BUTTON_BORDER_COLOR, width: 1.0, corner_radius: 15.0, clipsToBounds: true)
         outerView.addBorderAndColor(color: UIColor.clear, width: 0.0, corner_radius: 5.0, clipsToBounds: true)
-        //outerView.dropShadow(x: 0, y: 1, shadowColor: APPConstants.Colors.SHADOW_COLOR, opacity: 1, radius: 10)
-        // Initialization code
     }
 
     @IBAction func yesButtonActn(_ sender: UIButton) {

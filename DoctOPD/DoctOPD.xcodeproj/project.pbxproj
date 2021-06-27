@@ -55,6 +55,7 @@
 		DD2ED6B22687E4B800D1B9C4 /* DoctorProfileDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2ED6B02687E4B700D1B9C4 /* DoctorProfileDescriptionCell.xib */; };
 		DD2ED6B72687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2ED6B52687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift */; };
 		DD2ED6B82687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2ED6B62687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib */; };
+		DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2ED6BB26885E4C00D1B9C4 /* BannerList.swift */; };
 		DD5C1A872686752500266745 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C1A862686752500266745 /* HomeViewController.swift */; };
 		DD5C1A90268684DF00266745 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C1A8E268684DF00266745 /* WelcomeCell.swift */; };
 		DD5C1A91268684DF00266745 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5C1A8F268684DF00266745 /* WelcomeCell.xib */; };
@@ -236,6 +237,7 @@
 		DD2ED6B02687E4B700D1B9C4 /* DoctorProfileDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorProfileDescriptionCell.xib; sourceTree = "<group>"; };
 		DD2ED6B52687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAvailabilityInfoCell.swift; sourceTree = "<group>"; };
 		DD2ED6B62687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorAvailabilityInfoCell.xib; sourceTree = "<group>"; };
+		DD2ED6BB26885E4C00D1B9C4 /* BannerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerList.swift; sourceTree = "<group>"; };
 		DD5C1A862686752500266745 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DD5C1A8E268684DF00266745 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		DD5C1A8F268684DF00266745 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 			children = (
 				DD5C1AA12686A26600266745 /* CategoryList.swift */,
 				DD5C1AA52686A89000266745 /* ShortlistDoctor.swift */,
+				DD2ED6BB26885E4C00D1B9C4 /* BannerList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
 				DD5C1A872686752500266745 /* HomeViewController.swift in Sources */,
+				DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */,
 				DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */,
 				DD2ED6A82687C8E300D1B9C4 /* DoctorProfileViewModel.swift in Sources */,
 				DD07544C268222310098EB81 /* OTPStackView.swift in Sources */,

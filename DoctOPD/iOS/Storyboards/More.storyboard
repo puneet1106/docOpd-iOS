@@ -10,8 +10,8 @@
         <!--Terms ConditionVC-->
         <scene sceneID="CP5-0K-GJS">
             <objects>
-                <viewController storyboardIdentifier="TermsCondition_VC" id="YQk-fk-12S" customClass="TermsCondition_VC" customModule="iSticker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r4Z-aD-4HT" customClass="GradientView" customModule="iSticker" customModuleProvider="target">
+                <viewController storyboardIdentifier="TermsCondition_VC" id="YQk-fk-12S" customClass="TermsCondition_VC" customModule="DoctOPD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4Z-aD-4HT" customClass="GradientView" customModule="DoctOPD" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,7 +23,7 @@
                                         <subviews>
                                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="076-94-P2b">
                                                 <rect key="frame" x="0.0" y="5" width="414" height="803"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>

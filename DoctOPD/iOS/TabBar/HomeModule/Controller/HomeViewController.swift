@@ -27,12 +27,14 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib(nibName: "AboutDoctOPDCell", bundle: nil), forCellReuseIdentifier: "AboutDoctOPDCell")
 
         setupViewModel()
+        fetchBannerList()
+        fetchCategoryList()
+        fetchShortlistedDoctor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        fetchCategoryList()
-        fetchShortlistedDoctor()
+        
     }
     
     fileprivate func setupViewModel() {
@@ -70,6 +72,12 @@ class HomeViewController: UIViewController {
             self?.showMessage(alert, type: .info)
         }
         
+        self.viewModel.didGetBannerListData = { [weak self] in
+            if self?.viewModel.bannerModel?.status == 200 {
+                self?.tableView.reloadData()
+            }
+        }
+        
         self.viewModel.didGetCategoryListData = { [weak self] in
             if self?.viewModel.model?.status == 200 {
                 self?.tableView.reloadData()
@@ -83,6 +91,23 @@ class HomeViewController: UIViewController {
         }
         
     
+    }
+    
+    func openWebViewScreen(title: String, urlStr: String) {
+        let storyboard : UIStoryboard   =   UIStoryboard(name: APPConstants.StoryboardIdentifiers.MORE, bundle: nil)
+        let vc  =   storyboard.instantiateViewController(withIdentifier: APPConstants.TermsConditionScreen.TermsCondition_Controller) as! TermsCondition_VC
+        vc.openUrl  =   urlStr
+        vc.navigationtitle  = title
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func fetchBannerList(){
+        guard let requestUrl = URL(string: APPConstants.APIPath.getBannerList) else {
+           return
+        }
+        
+        let requestParam : [String: String] = [:]
+        viewModel.bindGetBannerListData(requestUrl: requestUrl, parameters: requestParam)
     }
     
     func fetchCategoryList(){
@@ -123,7 +148,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0{
-            return 280.0
+            return 290.0
         } else if indexPath.section == 1{
         if isCategoryListHidden {
             return 220.0
@@ -171,6 +196,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeCell", for: indexPath) as? WelcomeCell {
                 cell.cellDelegate = self
+                cell.inventoryData = self.viewModel.bannerModel?.inventory ?? []
                 cell.selectionStyle = .none
                 return cell
            }
@@ -220,11 +246,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: CollectionViewCellDelegate {
     func collectionView(collectionviewcell: InfoCollectionViewCell?, index: Int, didTappedInTableViewCell: WelcomeCell) {
-//        if let colorsRow = didTappedInTableViewCell.rowWithColors {
-//            self.tappedCell = colorsRow[index]
-//            performSegue(withIdentifier: "detailsviewcontrollerseg", sender: self)
-//            // You can also do changes to the cell you tapped using the 'collectionviewcell'
-//        }
+        if let urlStr = self.viewModel.bannerModel?.inventory?[index].url {
+            self.openWebViewScreen(title: "", urlStr: urlStr)
+        }
     }
 }
 

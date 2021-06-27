@@ -11,10 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WelcomeCell" id="KGk-i7-Jjw" customClass="WelcomeCell" customModule="DoctOPD" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uad-07-rdU">
@@ -32,6 +32,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-icon" translatesAutoresizingMaskIntoConstraints="NO" id="j7W-0k-c0Y">
+                                <rect key="frame" x="310" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ORH-gD-wWQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="SfT-oi-Ktn"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0r-GJ-maK">
                                 <rect key="frame" x="10" y="86" width="355" height="31"/>
                                 <subviews>
@@ -77,8 +84,10 @@
                             <constraint firstItem="P0r-GJ-maK" firstAttribute="top" secondItem="F4f-7K-f78" secondAttribute="bottom" constant="15" id="D4C-wX-Dkh"/>
                             <constraint firstItem="F4f-7K-f78" firstAttribute="top" secondItem="8WN-9d-Npy" secondAttribute="bottom" constant="5" id="i7V-BZ-Nh5"/>
                             <constraint firstAttribute="height" constant="180" id="oqJ-Pk-xfU"/>
+                            <constraint firstAttribute="trailing" secondItem="j7W-0k-c0Y" secondAttribute="trailing" constant="15" id="teT-ya-R1u"/>
                             <constraint firstItem="8WN-9d-Npy" firstAttribute="leading" secondItem="uad-07-rdU" secondAttribute="leading" constant="10" id="u5A-Y2-R4t"/>
                             <constraint firstItem="8WN-9d-Npy" firstAttribute="top" secondItem="uad-07-rdU" secondAttribute="top" constant="20" id="u8a-ch-8rk"/>
+                            <constraint firstItem="j7W-0k-c0Y" firstAttribute="top" secondItem="uad-07-rdU" secondAttribute="top" constant="20" id="x9G-s9-prc"/>
                             <constraint firstAttribute="trailing" secondItem="P0r-GJ-maK" secondAttribute="trailing" constant="10" id="ydk-xD-Vj3"/>
                         </constraints>
                     </view>
@@ -96,27 +105,38 @@
                             <outlet property="delegate" destination="-1" id="FzG-dY-9zB"/>
                         </connections>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-WL-oqg">
+                        <rect key="frame" x="37.5" y="261" width="300" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="300" id="ffJ-6o-BwO"/>
+                        </constraints>
+                    </pageControl>
                 </subviews>
                 <constraints>
                     <constraint firstItem="uad-07-rdU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dsz-61-Quk"/>
                     <constraint firstItem="JtA-di-Il8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="130" id="FIl-0g-T9c"/>
+                    <constraint firstAttribute="bottom" secondItem="49Q-WL-oqg" secondAttribute="bottom" constant="1" id="MxO-li-rhl"/>
                     <constraint firstAttribute="trailing" secondItem="uad-07-rdU" secondAttribute="trailing" id="amF-l9-cvx"/>
                     <constraint firstAttribute="trailing" secondItem="JtA-di-Il8" secondAttribute="trailing" id="bzp-yw-gio"/>
+                    <constraint firstItem="49Q-WL-oqg" firstAttribute="top" secondItem="JtA-di-Il8" secondAttribute="bottom" constant="1" id="k43-1B-VB1"/>
                     <constraint firstItem="uad-07-rdU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mwT-Ei-2Lh"/>
+                    <constraint firstItem="49Q-WL-oqg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nPB-qe-D57"/>
                     <constraint firstItem="JtA-di-Il8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sqo-XW-Z3s"/>
-                    <constraint firstAttribute="bottom" secondItem="JtA-di-Il8" secondAttribute="bottom" constant="20" id="tV6-wW-kjV"/>
+                    <constraint firstAttribute="bottom" secondItem="JtA-di-Il8" secondAttribute="bottom" constant="30" id="tV6-wW-kjV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundInfoView" destination="uad-07-rdU" id="XYS-xc-USo"/>
                 <outlet property="collectionView" destination="JtA-di-Il8" id="sg3-Kc-aLH"/>
+                <outlet property="pageControl" destination="49Q-WL-oqg" id="5Qt-He-8VV"/>
             </connections>
             <point key="canvasLocation" x="-177" y="42"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="filterIcon" width="25" height="19"/>
+        <image name="profile-icon" width="300" height="300"/>
         <image name="searchLogo" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

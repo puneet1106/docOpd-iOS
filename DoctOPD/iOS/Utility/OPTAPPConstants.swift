@@ -1236,8 +1236,10 @@ struct APPConstants {
         static let termsAndConditionsURL = "http://www.doctopd.com/static/html/termcondition.html"
         static let privacyPolicyURL = "http://www.doctopd.com/static/html/privacy.html"
         static let getCategoryList = "http://www.doctopd.com/doctopd/api/get-category"
+        static let getBannerList = "http://www.doctopd.com/doctopd/api/get-inventory"
         static let getShortlistedDoctorList = "http://www.doctopd.com/doctopd/api/get-shortlisted-doctor"
         static let doctorImagePathURL = "http://www.doctopd.com/static/images/doctor/"
+        static let inventoryImagePathURL = "http://www.doctopd.com/static/images/inventory/"
         static let getDoctorInfo = "http://www.doctopd.com/doctopd/api/get-doctor-details"
     }
     

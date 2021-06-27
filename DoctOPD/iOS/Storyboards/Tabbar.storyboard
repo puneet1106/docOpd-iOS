@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="ZjQ-eT-RCX">
             <objects>
                 <viewController id="HuV-ox-MgW" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="pLq-GI-blO"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="FWg-Du-nx4"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search_tab_icon" selectedImage="search_tab_icon" id="FWg-Du-nx4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJp-n9-Cl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1183" y="981"/>
         </scene>
-        <!--Item-->
+        <!--EMI Option-->
         <scene sceneID="o51-w4-RrA">
             <objects>
                 <viewController id="1DR-wO-00r" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="VUb-JJ-D9W"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Lyx-bV-EmY"/>
+                    <tabBarItem key="tabBarItem" title="EMI Option" image="emi_tab_icon" selectedImage="emi_tab_icon" id="Lyx-bV-EmY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwM-FN-ecs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +66,7 @@
                             <constraint firstItem="Y6V-g6-k0j" firstAttribute="bottom" secondItem="UfH-ET-wd2" secondAttribute="bottom" id="Ozd-kS-cQV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Vuh-xr-jpl"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_tab_icon" selectedImage="home_tab_icon" id="Vuh-xr-jpl"/>
                     <connections>
                         <outlet property="tableView" destination="UfH-ET-wd2" id="WOW-bx-dDD"/>
                     </connections>
@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.22745098039215686" green="0.34509803921568627" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.078431372549019607" green="0.24313725490196078" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="wfZ-jQ-iOI" kind="relationship" relationship="viewControllers" id="czl-6C-DpD"/>
@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="-1446" y="136"/>
         </scene>
-        <!--Item-->
+        <!--Medicines-->
         <scene sceneID="eCG-eP-c8C">
             <objects>
                 <viewController id="Le1-AZ-4rw" sceneMemberID="viewController">
@@ -107,13 +107,13 @@
                         <viewLayoutGuide key="safeArea" id="lIz-7e-7VU"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dex-Yx-vla"/>
+                    <tabBarItem key="tabBarItem" title="Medicines" image="medicine_tab_icon" selectedImage="medicine_tab_icon" id="dex-Yx-vla"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0s-o2-5iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41" y="-475"/>
         </scene>
-        <!--Item-->
+        <!--More-->
         <scene sceneID="Wrx-8S-w2n">
             <objects>
                 <viewController id="Z2m-p7-mz0" sceneMemberID="viewController">
@@ -123,7 +123,7 @@
                         <viewLayoutGuide key="safeArea" id="9zO-Y7-BqV"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0jA-Lj-ybk"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more_tab_icon" selectedImage="more_tab_icon" id="0jA-Lj-ybk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kn6-BK-K81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +131,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="emi_tab_icon" width="21.5" height="24.5"/>
+        <image name="home_tab_icon" width="25.5" height="24"/>
+        <image name="medicine_tab_icon" width="20.5" height="20"/>
+        <image name="more_tab_icon" width="25.5" height="19.5"/>
+        <image name="search_tab_icon" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

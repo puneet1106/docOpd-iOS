@@ -13,6 +13,12 @@ class HomeViewModel {
     
     var errorCallBack:((String)->())?
     
+    var bannerModel: BannerList?{
+        didSet {
+            print("Login Status code =", bannerModel?.status ?? 0)
+        }
+    }
+    
     var model: CategoryList?{
         didSet {
             print("Login Status code =", model?.status ?? 0)
@@ -65,6 +71,7 @@ class HomeViewModel {
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
+    var didGetBannerListData: (() -> ())?
     var didGetCategoryListData: (() -> ())?
     var didGetShortlistDoctorData: (() -> ())?
 
@@ -78,6 +85,44 @@ class HomeViewModel {
     //MARK: Internet monitor status
     @objc func networkStatusChanged(_ notification: Notification) {
         self.networkStatus = Reach().connectionStatus()
+    }
+    
+    //MARK: -- Example Func
+    func bindGetBannerListData(requestUrl: URL, parameters:[String: String]) {
+        
+        switch Reach().connectionStatus() {
+        case .offline:
+            self.isDisconnected = true
+            self.internetConnectionStatus?()
+        case .online:
+            self.isLoading = true
+            Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
+                self.isLoading = false
+                switch response.result {
+                case .success:
+                    print("result is \(String(describing: response.result.value))")
+                    do {
+                        
+                        let bannerModel = try JSONDecoder().decode(BannerList.self, from: response.data!)
+                        print("banner model is\(String(describing: bannerModel.inventory?.count))")
+                        self.bannerModel = bannerModel
+                        self.didGetBannerListData?()
+                    } catch let error as NSError {
+                        print(String(describing: error))
+                    }
+                
+                case .failure(let error):
+                    _ = String(data: response.data ?? Data(), encoding:.utf8)
+                    print("error description\(error.localizedDescription)")
+                //                self.alertMessage   =   error
+                default:
+                    break
+                    
+                }
+            }
+        default:
+            break
+        }
     }
     
     //MARK: -- Example Func
