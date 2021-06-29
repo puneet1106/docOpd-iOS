@@ -80,6 +80,7 @@ class HomeViewController: UIViewController {
         
         self.viewModel.didGetCategoryListData = { [weak self] in
             if self?.viewModel.model?.status == 200 {
+                CategoryListData.sharedInstance.categoryList = self?.viewModel.model?.category
                 self?.tableView.reloadData()
             }
         }
@@ -129,6 +130,11 @@ class HomeViewController: UIViewController {
             viewModel.bindGetShortlistedDoctorList(requestUrl: requestUrl, parameters: requestParam)
         }
     }
+
+    @objc func switchToSearchTab() {
+        self.tabBarController?.selectedIndex = 1
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -198,6 +204,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.cellDelegate = self
                 cell.inventoryData = self.viewModel.bannerModel?.inventory ?? []
                 cell.selectionStyle = .none
+                cell.findDoctorButton.addTarget(self, action: #selector(switchToSearchTab), for: .touchUpInside)
                 return cell
            }
         } else if indexPath.section == 1 {
@@ -264,6 +271,18 @@ extension HomeViewController: CategoryCellDelegate {
         self.tableView.reloadSections(NSIndexSet(index: 1) as IndexSet, with: .none)
 
     }
+    
+    func categoryCollectionView(collectionviewcell: CategoryCollectionCell?, index: Int, didTappedInTableViewCell: CategoryCell) {
+        if let controller = self.tabBarController?.viewControllers?[1] as? UINavigationController{
+            
+            if let searchController = controller.children.first as? SearchDoctorViewController {
+                searchController.selectedCategory = self.viewModel.model?.category?[index].name ?? ""
+                self.tabBarController?.selectedIndex = 1
+            }
+                        
+        }
+
+    }
 }
 
 extension HomeViewController: ShortListedDoctorCellDelegate {
@@ -275,6 +294,7 @@ extension HomeViewController: ShortListedDoctorCellDelegate {
         let storyboard = UIStoryboard(name: APPConstants.StoryboardIdentifiers.PROFILE, bundle: nil)
         let newView = storyboard.instantiateViewController(withIdentifier: APPConstants.ProfileScreen.DOCTOR_INFO_SCREEN) as! DoctorProfileViewController
         newView.doctorId = profileId
+        newView.isShortlistedDoctor = true
         self.navigationController?.pushViewController(newView, animated: true)
     }
 }

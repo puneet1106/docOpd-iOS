@@ -20,6 +20,7 @@ class WelcomeCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
 
+    @IBOutlet weak var findDoctorButton: UIButton!
     weak var cellDelegate: CollectionViewCellDelegate?
     
     var inventoryData: [Inventory]?{

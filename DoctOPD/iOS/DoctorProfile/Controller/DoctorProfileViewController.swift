@@ -12,6 +12,7 @@ import SDWebImage
 
 class DoctorProfileViewController: UIViewController {
 
+    @IBOutlet weak var doctorShortlistButton: UIButton!
     @IBOutlet weak var backgroundInfoView: UIView!
     @IBOutlet weak var doctorProfileImageView: UIImageView!
     @IBOutlet var tableView: UITableView!
@@ -22,6 +23,7 @@ class DoctorProfileViewController: UIViewController {
     
     var viewModel = DoctorProfileViewModel()
     var doctorId: Int = 0
+    var isShortlistedDoctor: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +90,11 @@ class DoctorProfileViewController: UIViewController {
             }
         }
     
+        self.viewModel.didGetDoctorShortlisted = { [weak self] in
+            if self?.viewModel.model?.status == 200 {
+                self?.setShortListButtonStatus()
+            }
+        }
     }
     
     func setUpUI(){
@@ -100,7 +107,15 @@ class DoctorProfileViewController: UIViewController {
         let location = self.viewModel.model?.profile?.clinicAddress?.first?.location ?? ""
         let state = self.viewModel.model?.profile?.clinicAddress?.first?.state ?? ""
         self.doctorAddressLabel.text =  city + " " + location + " " + state
-      
+        self.setShortListButtonStatus()
+    }
+    
+    func setShortListButtonStatus(){
+        if isShortlistedDoctor {
+            self.doctorShortlistButton.setImage(UIImage(named: "minus-icon"), for: .normal)
+        } else {
+            self.doctorShortlistButton.setImage(UIImage(named: "plus-icon"), for: .normal)
+        }
     }
     
     func fetchDoctorInfo(){
@@ -114,6 +129,30 @@ class DoctorProfileViewController: UIViewController {
     
     @IBAction func backButtonActn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func doctorShortlistButtonActn(_ sender: UIButton) {
+        
+        guard let requestUrl = URL(string: APPConstants.APIPath.shortListDoctor) else {
+           return
+        }
+        
+        //userId=4&profileId=44
+        
+        guard let userId = UserDefaults.standard.value(forKey: "userId") else {
+            return
+        }
+
+        let requestParam : [String: String] = ["profileId":"\(doctorId)", "userId": "\(userId)"]
+        
+        if isShortlistedDoctor {
+            isShortlistedDoctor = false
+        } else {
+            isShortlistedDoctor = true
+        }
+        self.viewModel.bindShortlistDoctor(requestUrl: requestUrl, parameters: requestParam)
+        
     }
     
 }

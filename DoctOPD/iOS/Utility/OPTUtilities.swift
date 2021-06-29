@@ -427,3 +427,11 @@ extension UIView {
            layer.rasterizationScale = UIScreen.main.scale
        }
 }
+
+
+class CategoryListData {
+    static var sharedInstance = CategoryListData()
+    private init() {}
+
+    var categoryList: [CategoryItem]?
+}

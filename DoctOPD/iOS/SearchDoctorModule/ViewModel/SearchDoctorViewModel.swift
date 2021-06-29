@@ -1,19 +1,18 @@
 //
-//  DoctorProfileViewModel.swift
+//  SearchDoctorViewModel.swift
 //  DoctOPD (iOS)
 //
-//  Created by Puneet on 27/06/21.
+//  Created by Puneet on 29/06/21.
 //
-
 
 import Foundation
 import Alamofire
 
-class DoctorProfileViewModel {
+class SearchDoctorViewModel {
     
     var errorCallBack:((String)->())?
     
-    var model: DoctorProfileModel?{
+    var model: SearchDoctorModel?{
         didSet {
             print("Login Status code =", model?.status ?? 0)
         }
@@ -60,9 +59,8 @@ class DoctorProfileViewModel {
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
-    var didGetDoctorInfoData: (() -> ())?
-    var didGetDoctorShortlisted: (() -> ())?
-
+    var didGetSearchDoctorData: (() -> ())?
+    
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
@@ -75,8 +73,8 @@ class DoctorProfileViewModel {
     }
     
     //MARK: -- Example Func
-    func bindGetDoctorInfoData(requestUrl: URL, parameters:[String: String]) {
-        
+    func bindGetDoctorSearchLitData(requestUrl: URL, parameters:[String: String]) {
+        print("request url is \(requestUrl) and params is \(parameters)")
         switch Reach().connectionStatus() {
         case .offline:
             self.isDisconnected = true
@@ -90,48 +88,10 @@ class DoctorProfileViewModel {
                     print("result is \(String(describing: response.result.value))")
                     do {
                         
-                        let model = try JSONDecoder().decode(DoctorProfileModel.self, from: response.data!)
-                        print("model is\(String(describing: model.profile?.clinicAddress?.first?.shiftTiming))")
+                        let model = try JSONDecoder().decode(SearchDoctorModel.self, from: response.data!)
+                        print("model is\(String(describing: model.profiles?.first?.category))")
                         self.model = model
-                        self.didGetDoctorInfoData?()
-                    } catch let error as NSError {
-                        print(String(describing: error))
-                    }
-                
-                case .failure(let error):
-                    _ = String(data: response.data ?? Data(), encoding:.utf8)
-                    print("error description\(error.localizedDescription)")
-                //                self.alertMessage   =   error
-                default:
-                    break
-                    
-                }
-            }
-        default:
-            break
-        }
-    }
-    
-    //MARK: -- Example Func
-    func bindShortlistDoctor(requestUrl: URL, parameters:[String: String]) {
-        print("requestUrl \(requestUrl) and params are \(parameters)")
-        switch Reach().connectionStatus() {
-        case .offline:
-            self.isDisconnected = true
-            self.internetConnectionStatus?()
-        case .online:
-            self.isLoading = true
-            Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
-                self.isLoading = false
-                switch response.result {
-                case .success:
-                    print("result is \(String(describing: response.result.value))")
-                    do {
-                        
-                        let model = try JSONDecoder().decode(DoctorProfileModel.self, from: response.data!)
-                        print("model is\(String(describing: model.profile?.clinicAddress?.first?.shiftTiming))")
-                        self.model = model
-                        self.didGetDoctorShortlisted?()
+                        self.didGetSearchDoctorData?()
                     } catch let error as NSError {
                         print(String(describing: error))
                     }

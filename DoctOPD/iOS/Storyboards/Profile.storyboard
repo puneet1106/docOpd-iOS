@@ -61,6 +61,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iO-UQ-ogg">
+                                        <rect key="frame" x="369" y="17.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="gaT-qS-I6T"/>
+                                            <constraint firstAttribute="width" constant="25" id="vUh-vz-FMq"/>
+                                        </constraints>
+                                        <state key="normal" image="plus-icon"/>
+                                        <connections>
+                                            <action selector="doctorShortlistButtonActn:" destination="Ive-Nd-FCO" eventType="touchUpInside" id="hNg-1i-EOs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.24313725489999999" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -78,8 +89,10 @@
                                     <constraint firstItem="JBW-JE-ChD" firstAttribute="top" secondItem="URK-Ub-dnt" secondAttribute="bottom" constant="5" id="ZuB-6w-2mJ"/>
                                     <constraint firstAttribute="height" constant="180" id="aJ1-h8-duw"/>
                                     <constraint firstItem="nch-mi-XHR" firstAttribute="top" secondItem="vgU-qf-WXf" secondAttribute="bottom" constant="20" id="cqd-5L-Sr8"/>
+                                    <constraint firstAttribute="trailing" secondItem="1iO-UQ-ogg" secondAttribute="trailing" constant="20" id="dhk-tf-0Xk"/>
                                     <constraint firstItem="lqZ-ad-xnD" firstAttribute="leading" secondItem="nch-mi-XHR" secondAttribute="trailing" constant="10" id="efd-ta-01L"/>
                                     <constraint firstItem="nch-mi-XHR" firstAttribute="leading" secondItem="qZQ-rp-h18" secondAttribute="leading" constant="20" id="nPF-Hu-UWe"/>
+                                    <constraint firstItem="1iO-UQ-ogg" firstAttribute="centerY" secondItem="Dcv-3j-bwt" secondAttribute="centerY" id="y9a-DE-7Ae"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YcF-ff-DnS">
@@ -109,6 +122,7 @@
                         <outlet property="doctorName" destination="lqZ-ad-xnD" id="rOt-U7-wS4"/>
                         <outlet property="doctorProfileImageView" destination="nch-mi-XHR" id="z2e-02-Xey"/>
                         <outlet property="doctorQualificationLabel" destination="URK-Ub-dnt" id="Os3-9r-on2"/>
+                        <outlet property="doctorShortlistButton" destination="1iO-UQ-ogg" id="M7E-XG-eB0"/>
                         <outlet property="tableView" destination="YcF-ff-DnS" id="Pl6-wP-aFT"/>
                     </connections>
                 </viewController>
@@ -118,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus-icon" width="256" height="256"/>
         <image name="white-back" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

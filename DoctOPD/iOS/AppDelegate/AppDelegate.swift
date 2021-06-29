@@ -41,9 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
        
         appDelegate?.window?.makeKeyAndVisible()
+       
         return true
     }
     
-    
 }
+
 

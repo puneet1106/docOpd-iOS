@@ -76,6 +76,10 @@ struct APPConstants {
         static let DOCTOR_INFO_SCREEN = "DoctorProfileViewController"
     }
     
+    struct SearchDoctorScreen {
+        static let DOCTOR_COUNT_TEXT = "We have found %d Doctors"
+    }
+    
     struct TermsConditionScreen {
         static let TermsCondition_Controller = "TermsCondition_VC"
     }
@@ -87,6 +91,15 @@ struct APPConstants {
     struct PasswordScreen {
         static let Enter_Password_Placeholder = "Enter Password"
     }
+    
+    struct InsuranceTextScreen {
+        static let INSURANCE_CONFIRMATION_SCREEN = "InsuranceConfirmationViewController"
+        static let Title_Insurance = "Great, do you want to Renew with us Health Insurance Policy?\n\n"
+        static let SubTitle_Insurance = "Let's know some key things about this application\n\n"
+        static let Description_Insurance = "  • You can avail of OPD benefit* by taking any policy in of any company through DoctOPD. And if you have already taken a health policy, you can take this benefit by renewing that policy through us.\n  • Through this application, you can get your policy anytime, which you have taken or renewed through this application, why it should not be of any company.\n  • Through this application, you can get information about distinguished and reputed doctors in your area.\n  • You can get this OPD amount once a year.\n• This amount will be payable in addition to any hospital claim, pre-hospitalization, and post-hospitalization amount.\n  • This amount will be done by the DoctOPD application.\n  • You can also renew your health policy with the EMI option, that too without any interest."
+        
+    }
+    
     
     struct DetailsScreen {
         static let ORDER_DETAILS_SCREEN = "OPTOrderDetailsViewController"
@@ -210,10 +223,12 @@ struct APPConstants {
         static let OTP_BG_COLOR = UIColor(red: 229.0 / 255.0, green: 240.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
         static let OTP_BORDER_COLOR = UIColor(red: 181.0 / 255.0, green: 208.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
         static let TEXT_COLOR = UIColor(red: 9.0 / 255.0, green: 9.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
-        static let POLICY_CONDITIONS_COLOR = UIColor(displayP3Red: 16.0 / 256.0, green: 149.0 / 256.0, blue: 117.0 / 256.0, alpha: 1.0)
-        static let INSURANCE_BUTTON_BORDER_COLOR = UIColor(red: 62.0 / 256.0, green: 91.0 / 256.0, blue: 244.0 / 256.0, alpha: 1.0)
-        static let SHADOW_COLOR = UIColor(red: 206.0 / 256.0, green: 219.0 / 256.0, blue: 239.0 / 256.0, alpha: 1.0)
-        static let CATEGORY_CELL_SHADOW_COLOR = UIColor(red: 219.0 / 256.0, green: 228.0 / 256.0, blue: 242.0 / 256.0, alpha: 1.0)
+        static let POLICY_CONDITIONS_COLOR = UIColor(displayP3Red: 16.0 / 255.0, green: 149.0 / 255.0, blue: 117.0 / 255.0, alpha: 1.0)
+        static let INSURANCE_BUTTON_BORDER_COLOR = UIColor(red: 62.0 / 255.0, green: 91.0 / 255.0, blue: 244.0 / 255.0, alpha: 1.0)
+        static let SHADOW_COLOR = UIColor(red: 206.0 / 255.0, green: 219.0 / 255.0, blue: 239.0 / 255.0, alpha: 1.0)
+        static let CATEGORY_CELL_SHADOW_COLOR = UIColor(red: 219.0 / 255.0, green: 228.0 / 255.0, blue: 242.0 / 255.0, alpha: 1.0)
+        static let INSURANCE_TITLE_COLOR = UIColor(red: 77.0 / 255.0, green: 77.0 / 255.0, blue: 77.0 / 255.0, alpha: 1.0)
+        static let INSURANCE_SUBTITLE_COLOR = UIColor(red: 187.0 / 255.0, green: 127.0 / 255.0, blue: 8.0 / 255.0, alpha: 1.0)
 
 
 
@@ -1241,6 +1256,9 @@ struct APPConstants {
         static let doctorImagePathURL = "http://www.doctopd.com/static/images/doctor/"
         static let inventoryImagePathURL = "http://www.doctopd.com/static/images/inventory/"
         static let getDoctorInfo = "http://www.doctopd.com/doctopd/api/get-doctor-details"
+        static let findDoctors = "http://www.doctopd.com/doctopd/api/find-doctors"
+        static let shortListDoctor = "http://www.doctopd.com/doctopd/api/shortlist-doctor"
+        static let getUserConsent = "http://www.doctopd.com/doctopd/api/save-user-consent"
     }
     
     struct HomeInsuranceScreenInfoSection {

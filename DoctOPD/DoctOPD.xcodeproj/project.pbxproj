@@ -170,6 +170,20 @@
 		DD5C1B9526878EF600266745 /* Somnologist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C1B8726878EF500266745 /* Somnologist.jpg */; };
 		DD5C1B9626878EF600266745 /* Trichologist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C1B8826878EF500266745 /* Trichologist.jpg */; };
 		DD5C1B9726878EF600266745 /* Speech-Therapist.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C1B8926878EF600266745 /* Speech-Therapist.jpeg */; };
+		DD71BB3A268A6C5A004C2088 /* SearchDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB39268A6C5A004C2088 /* SearchDoctorViewController.swift */; };
+		DD71BB3E268A6C76004C2088 /* SearchDoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB3D268A6C76004C2088 /* SearchDoctorViewModel.swift */; };
+		DD71BB45268A8004004C2088 /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB43268A8004004C2088 /* SearchCategoryCell.swift */; };
+		DD71BB46268A8004004C2088 /* SearchCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD71BB44268A8004004C2088 /* SearchCategoryCell.xib */; };
+		DD71BB4D268A802C004C2088 /* SearchCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB4B268A802C004C2088 /* SearchCategoryCollectionViewCell.swift */; };
+		DD71BB4E268A802C004C2088 /* SearchCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD71BB4C268A802C004C2088 /* SearchCategoryCollectionViewCell.xib */; };
+		DD71BB52268B7EC1004C2088 /* SearchDoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB51268B7EC0004C2088 /* SearchDoctorModel.swift */; };
+		DD71BB57268B8A88004C2088 /* SearchDoctorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB55268B8A88004C2088 /* SearchDoctorListCell.swift */; };
+		DD71BB58268B8A88004C2088 /* SearchDoctorListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD71BB56268B8A88004C2088 /* SearchDoctorListCell.xib */; };
+		DD71BB61268BBDC0004C2088 /* EMIOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB60268BBDC0004C2088 /* EMIOptionViewController.swift */; };
+		DD71BB65268BC8ED004C2088 /* InsuranceConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB64268BC8ED004C2088 /* InsuranceConfirmationViewController.swift */; };
+		DD71BB69268BCC45004C2088 /* EMIOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB68268BCC45004C2088 /* EMIOptionViewModel.swift */; };
+		DD71BB6D268BCC58004C2088 /* EMIOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB6C268BCC58004C2088 /* EMIOptionModel.swift */; };
+		DD71BB74268BD032004C2088 /* MedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB73268BD032004C2088 /* MedicinesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,6 +366,20 @@
 		DD5C1B8726878EF500266745 /* Somnologist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Somnologist.jpg; sourceTree = "<group>"; };
 		DD5C1B8826878EF500266745 /* Trichologist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Trichologist.jpg; sourceTree = "<group>"; };
 		DD5C1B8926878EF600266745 /* Speech-Therapist.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Speech-Therapist.jpeg"; sourceTree = "<group>"; };
+		DD71BB39268A6C5A004C2088 /* SearchDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDoctorViewController.swift; sourceTree = "<group>"; };
+		DD71BB3D268A6C76004C2088 /* SearchDoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDoctorViewModel.swift; sourceTree = "<group>"; };
+		DD71BB43268A8004004C2088 /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
+		DD71BB44268A8004004C2088 /* SearchCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCell.xib; sourceTree = "<group>"; };
+		DD71BB4B268A802C004C2088 /* SearchCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD71BB4C268A802C004C2088 /* SearchCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD71BB51268B7EC0004C2088 /* SearchDoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDoctorModel.swift; sourceTree = "<group>"; };
+		DD71BB55268B8A88004C2088 /* SearchDoctorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDoctorListCell.swift; sourceTree = "<group>"; };
+		DD71BB56268B8A88004C2088 /* SearchDoctorListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDoctorListCell.xib; sourceTree = "<group>"; };
+		DD71BB60268BBDC0004C2088 /* EMIOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOptionViewController.swift; sourceTree = "<group>"; };
+		DD71BB64268BC8ED004C2088 /* InsuranceConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceConfirmationViewController.swift; sourceTree = "<group>"; };
+		DD71BB68268BCC45004C2088 /* EMIOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOptionViewModel.swift; sourceTree = "<group>"; };
+		DD71BB6C268BCC58004C2088 /* EMIOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOptionModel.swift; sourceTree = "<group>"; };
+		DD71BB73268BD032004C2088 /* MedicinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesViewController.swift; sourceTree = "<group>"; };
 		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -414,6 +442,7 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD71BB32268A627A004C2088 /* SearchDoctorModule */,
 				DD2ED69A2687C7DC00D1B9C4 /* DoctorProfile */,
 				DD0754772682A5A40098EB81 /* TabBar */,
 				DD075483268351CE0098EB81 /* TermsConditions */,
@@ -577,6 +606,8 @@
 		DD0754772682A5A40098EB81 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				DD71BB71268BCFFD004C2088 /* MedicinesModule */,
+				DD71BB5B268BBD84004C2088 /* EMI Module */,
 				DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */,
 				DD5C1A812686705700266745 /* HomeModule */,
 			);
@@ -822,6 +853,129 @@
 			path = CategoryImages;
 			sourceTree = "<group>";
 		};
+		DD71BB32268A627A004C2088 /* SearchDoctorModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB36268A6381004C2088 /* View */,
+				DD71BB35268A629B004C2088 /* Model */,
+				DD71BB34268A6293004C2088 /* ViewModel */,
+				DD71BB33268A6285004C2088 /* ViewController */,
+			);
+			path = SearchDoctorModule;
+			sourceTree = "<group>";
+		};
+		DD71BB33268A6285004C2088 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB39268A6C5A004C2088 /* SearchDoctorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD71BB34268A6293004C2088 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB3D268A6C76004C2088 /* SearchDoctorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD71BB35268A629B004C2088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB51268B7EC0004C2088 /* SearchDoctorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD71BB36268A6381004C2088 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB42268A7FDE004C2088 /* UITableViewCell */,
+				DD71BB41268A7FD4004C2088 /* UICollectionViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD71BB41268A7FD4004C2088 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB4B268A802C004C2088 /* SearchCategoryCollectionViewCell.swift */,
+				DD71BB4C268A802C004C2088 /* SearchCategoryCollectionViewCell.xib */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DD71BB42268A7FDE004C2088 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB43268A8004004C2088 /* SearchCategoryCell.swift */,
+				DD71BB44268A8004004C2088 /* SearchCategoryCell.xib */,
+				DD71BB55268B8A88004C2088 /* SearchDoctorListCell.swift */,
+				DD71BB56268B8A88004C2088 /* SearchDoctorListCell.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		DD71BB5B268BBD84004C2088 /* EMI Module */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB5F268BBDA4004C2088 /* Model */,
+				DD71BB5E268BBD9F004C2088 /* View */,
+				DD71BB5D268BBD98004C2088 /* ViewModel */,
+				DD71BB5C268BBD8E004C2088 /* ViewController */,
+			);
+			path = "EMI Module";
+			sourceTree = "<group>";
+		};
+		DD71BB5C268BBD8E004C2088 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB60268BBDC0004C2088 /* EMIOptionViewController.swift */,
+				DD71BB64268BC8ED004C2088 /* InsuranceConfirmationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD71BB5D268BBD98004C2088 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB68268BCC45004C2088 /* EMIOptionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD71BB5E268BBD9F004C2088 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD71BB5F268BBDA4004C2088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB6C268BCC58004C2088 /* EMIOptionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD71BB71268BCFFD004C2088 /* MedicinesModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB72268BD012004C2088 /* ViewController */,
+			);
+			path = MedicinesModule;
+			sourceTree = "<group>";
+		};
+		DD71BB72268BD012004C2088 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB73268BD032004C2088 /* MedicinesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -947,6 +1101,7 @@
 				DD5C1B4F26878ED400266745 /* Public-Health-Dentist.jpg in Resources */,
 				DD5C1B9026878EF600266745 /* Spine-Surgeon.jpeg in Resources */,
 				DD5C1AE526878E9D00266745 /* Counselling-Psychologist.jpg in Resources */,
+				DD71BB46268A8004004C2088 /* SearchCategoryCell.xib in Resources */,
 				DD5C1AE426878E9D00266745 /* Addiction-Psychiatrist.jpg in Resources */,
 				DD5C1B9626878EF600266745 /* Trichologist.jpg in Resources */,
 				DD5C1A91268684DF00266745 /* WelcomeCell.xib in Resources */,
@@ -977,6 +1132,7 @@
 				DD5C1AEE26878E9D00266745 /* Dentist.jpg in Resources */,
 				DD5C1B0926878EB600266745 /* Neurotologist.jpg in Resources */,
 				DD5C1B8E26878EF600266745 /* Neurointerventional-Surgery.jpg in Resources */,
+				DD71BB58268B8A88004C2088 /* SearchDoctorListCell.xib in Resources */,
 				DD075352267FD8480098EB81 /* LaunchScreen.storyboard in Resources */,
 				DD5C1B4326878ED400266745 /* Prosthodontist.jpg in Resources */,
 				DD5C1B0C26878EB600266745 /* Family-Physician.jpg in Resources */,
@@ -1007,6 +1163,7 @@
 				DD5C1B9126878EF600266745 /* Medical-Oncologist.jpg in Resources */,
 				DD5C1AEB26878E9D00266745 /* Cosmetic_Aesthetic-Dentist.jpg in Resources */,
 				DD5C1B5026878ED400266745 /* Oral-Medicine-and-Radiology.jpg in Resources */,
+				DD71BB4E268A802C004C2088 /* SearchCategoryCollectionViewCell.xib in Resources */,
 				DD5C1B0826878EB600266745 /* Gynecologic-Oncologist.jpg in Resources */,
 				DD5C1B7526878EE100266745 /* chest_Diseases_Specialist.jpg in Resources */,
 				DD5C1AEA26878E9D00266745 /* Bariatric-Surgeon.jpg in Resources */,
@@ -1081,17 +1238,22 @@
 				DD5C1A90268684DF00266745 /* WelcomeCell.swift in Sources */,
 				DD5C1AAB2687193200266745 /* CategoryCell.swift in Sources */,
 				DD0754302681DCD80098EB81 /* UIView+Toast.m in Sources */,
+				DD71BB3E268A6C76004C2088 /* SearchDoctorViewModel.swift in Sources */,
 				DD07545C26827A450098EB81 /* PasswordViewModel.swift in Sources */,
 				DD07546426827A5E0098EB81 /* PasswordModel.swift in Sources */,
+				DD71BB3A268A6C5A004C2088 /* SearchDoctorViewController.swift in Sources */,
 				DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */,
 				DD07539F2681208E0098EB81 /* OnboardingPageViewController.swift in Sources */,
 				DD5C1AC52687660800266745 /* AboutDoctOPDCell.swift in Sources */,
 				DD0753AB2681210D0098EB81 /* OnboardingThirdViewController.swift in Sources */,
 				DD075470268285C30098EB81 /* SignInModel.swift in Sources */,
+				DD71BB61268BBDC0004C2088 /* EMIOptionViewController.swift in Sources */,
+				DD71BB74268BD032004C2088 /* MedicinesViewController.swift in Sources */,
 				DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */,
 				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
 				DD075486268351EB0098EB81 /* TermsCondition_VC.swift in Sources */,
 				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
+				DD71BB65268BC8ED004C2088 /* InsuranceConfirmationViewController.swift in Sources */,
 				DD07546C268285A00098EB81 /* SignInViewModel.swift in Sources */,
 				DD075446268221FE0098EB81 /* OTPTextField.swift in Sources */,
 				DD2ED6AC2687C8F100D1B9C4 /* DoctorProfileModel.swift in Sources */,
@@ -1099,6 +1261,8 @@
 				DD2ED6A42687C8C700D1B9C4 /* DoctorProfileViewController.swift in Sources */,
 				DD0753CF268146970098EB81 /* OPTAPPConstants.swift in Sources */,
 				DD5C1AA62686A89000266745 /* ShortlistDoctor.swift in Sources */,
+				DD71BB52268B7EC1004C2088 /* SearchDoctorModel.swift in Sources */,
+				DD71BB69268BCC45004C2088 /* EMIOptionViewModel.swift in Sources */,
 				DD0753D3268146970098EB81 /* OPTUtilityExtension.swift in Sources */,
 				DD07542F2681DCD80098EB81 /* GSMessage.swift in Sources */,
 				DD07541D2681D5E60098EB81 /* SignUpViewModel.swift in Sources */,
@@ -1106,6 +1270,7 @@
 				DD5C1AB726874D7E00266745 /* ShortlistedDoctorCell.swift in Sources */,
 				DD5C1A9826868B2A00266745 /* InfoCollectionViewCell.swift in Sources */,
 				DD07546026827A520098EB81 /* OTPModel.swift in Sources */,
+				DD71BB4D268A802C004C2088 /* SearchCategoryCollectionViewCell.swift in Sources */,
 				DD075314267FD5750098EB81 /* SignUpModel.swift in Sources */,
 				DD5C1A9D26869FFD00266745 /* HomeViewModel.swift in Sources */,
 				DD0754502682246E0098EB81 /* OTPViewController.swift in Sources */,
@@ -1113,14 +1278,17 @@
 				DD07545826827A320098EB81 /* OTPViewModel.swift in Sources */,
 				DD0754212681D6610098EB81 /* Reach.swift in Sources */,
 				DD075309267E16D00098EB81 /* AppDelegate.swift in Sources */,
+				DD71BB6D268BCC58004C2088 /* EMIOptionModel.swift in Sources */,
 				DD5C1AB12687194F00266745 /* CategoryCollectionCell.swift in Sources */,
 				DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
 				DD5C1A872686752500266745 /* HomeViewController.swift in Sources */,
 				DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */,
+				DD71BB45268A8004004C2088 /* SearchCategoryCell.swift in Sources */,
 				DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */,
 				DD2ED6A82687C8E300D1B9C4 /* DoctorProfileViewModel.swift in Sources */,
 				DD07544C268222310098EB81 /* OTPStackView.swift in Sources */,
+				DD71BB57268B8A88004C2088 /* SearchDoctorListCell.swift in Sources */,
 				DD0753A3268120EA0098EB81 /* OnboardingFirstViewController.swift in Sources */,
 				DD0753B32681288E0098EB81 /* PageControlViewController.swift in Sources */,
 				DD5C1AA22686A26600266745 /* CategoryList.swift in Sources */,

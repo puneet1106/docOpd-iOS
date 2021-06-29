@@ -62,16 +62,23 @@
                                             <constraint firstAttribute="height" constant="15" id="ZW1-Dc-mUx"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-vh-3fs">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="31"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="CPv-vh-3fs" firstAttribute="leading" secondItem="P0r-GJ-maK" secondAttribute="leading" id="7M4-3I-nt1"/>
                                     <constraint firstItem="JmC-TM-f7R" firstAttribute="centerY" secondItem="P0r-GJ-maK" secondAttribute="centerY" id="83m-L5-ic1"/>
                                     <constraint firstAttribute="trailing" secondItem="JmC-TM-f7R" secondAttribute="trailing" constant="10" id="Eg1-Vp-lMz"/>
                                     <constraint firstAttribute="height" constant="31" id="Iiv-76-RsK"/>
                                     <constraint firstAttribute="trailing" secondItem="J4h-Wf-lal" secondAttribute="trailing" id="Jk2-Yk-I8K"/>
+                                    <constraint firstAttribute="bottom" secondItem="CPv-vh-3fs" secondAttribute="bottom" id="Mu4-Z6-XzL"/>
                                     <constraint firstItem="wgR-lU-PbU" firstAttribute="leading" secondItem="P0r-GJ-maK" secondAttribute="leading" constant="10" id="SLv-Wg-sjA"/>
+                                    <constraint firstAttribute="trailing" secondItem="CPv-vh-3fs" secondAttribute="trailing" id="UaW-dB-FgQ"/>
                                     <constraint firstItem="J4h-Wf-lal" firstAttribute="top" secondItem="P0r-GJ-maK" secondAttribute="top" id="Y8t-Me-L4i"/>
                                     <constraint firstAttribute="bottom" secondItem="J4h-Wf-lal" secondAttribute="bottom" id="Z4E-4G-irz"/>
+                                    <constraint firstItem="CPv-vh-3fs" firstAttribute="top" secondItem="P0r-GJ-maK" secondAttribute="top" id="eBe-5L-hgm"/>
                                     <constraint firstItem="wgR-lU-PbU" firstAttribute="centerY" secondItem="P0r-GJ-maK" secondAttribute="centerY" id="spk-BP-qc7"/>
                                     <constraint firstItem="J4h-Wf-lal" firstAttribute="leading" secondItem="P0r-GJ-maK" secondAttribute="leading" id="txX-zS-Vce"/>
                                 </constraints>
@@ -129,6 +136,7 @@
             <connections>
                 <outlet property="backgroundInfoView" destination="uad-07-rdU" id="XYS-xc-USo"/>
                 <outlet property="collectionView" destination="JtA-di-Il8" id="sg3-Kc-aLH"/>
+                <outlet property="findDoctorButton" destination="CPv-vh-3fs" id="2fk-Oi-EkC"/>
                 <outlet property="pageControl" destination="49Q-WL-oqg" id="5Qt-He-8VV"/>
             </connections>
             <point key="canvasLocation" x="-177" y="42"/>

@@ -9,6 +9,8 @@ import UIKit
 
 protocol CategoryCellDelegate: class {
     func didTapSeeAll(isHide: Bool)
+    func categoryCollectionView(collectionviewcell: CategoryCollectionCell?, index: Int, didTappedInTableViewCell: CategoryCell)
+
     // other delegate methods that you can define to perform action in viewcontroller
 }
 
@@ -72,9 +74,9 @@ class CategoryCell: UITableViewCell {
 extension CategoryCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      //  let cell = collectionView.cellForItem(at: indexPath) as? InfoCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionCell
         print("I'm tapping the \(indexPath.item)")
-        //self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        self.cellDelegate?.categoryCollectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
