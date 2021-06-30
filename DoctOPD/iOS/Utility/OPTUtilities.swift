@@ -62,6 +62,27 @@ final class OPTUtilities: NSObject {
         #endif
         return environment
     }
+    
+    func saveUserData(model: UserModel){
+        let user = User(name: model.name, email: model.email, mobileNumber: model.mobileNumber)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(user) {
+        let defaults = UserDefaults.standard
+        defaults.set(encoded, forKey: "UserInfo")
+            defaults.synchronize()
+        }
+    }
+    
+    func getUserData() -> User{
+        if let savedPerson = UserDefaults.standard.object(forKey: "UserInfo") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedPerson = try? decoder.decode(User.self, from: savedPerson) {
+                print(loadedPerson.name ?? "")
+                return loadedPerson
+            }
+        }
+        return User(name: "", email: "", mobileNumber: "")
+    }
     /**
      Converts the Local Environemnt Plist in to NSDictionary instance
      
@@ -426,6 +447,7 @@ extension UIView {
            layer.shouldRasterize = true
            layer.rasterizationScale = UIScreen.main.scale
        }
+    
 }
 
 
@@ -434,4 +456,10 @@ class CategoryListData {
     private init() {}
 
     var categoryList: [CategoryItem]?
+}
+
+struct User: Codable {
+    var name: String?
+    var email: String?
+    var mobileNumber: String?
 }

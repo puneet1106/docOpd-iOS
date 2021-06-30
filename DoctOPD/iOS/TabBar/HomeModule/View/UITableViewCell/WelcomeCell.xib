@@ -39,6 +39,9 @@
                                     <constraint firstAttribute="height" constant="50" id="SfT-oi-Ktn"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vZ-Aj-9EU">
+                                <rect key="frame" x="310" y="20" width="50" height="50"/>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0r-GJ-maK">
                                 <rect key="frame" x="10" y="86" width="355" height="31"/>
                                 <subviews>
@@ -89,9 +92,13 @@
                             <constraint firstItem="P0r-GJ-maK" firstAttribute="leading" secondItem="F4f-7K-f78" secondAttribute="leading" id="6Kf-R8-RQF"/>
                             <constraint firstItem="F4f-7K-f78" firstAttribute="leading" secondItem="8WN-9d-Npy" secondAttribute="leading" id="8Di-oe-fDk"/>
                             <constraint firstItem="P0r-GJ-maK" firstAttribute="top" secondItem="F4f-7K-f78" secondAttribute="bottom" constant="15" id="D4C-wX-Dkh"/>
+                            <constraint firstItem="6vZ-Aj-9EU" firstAttribute="leading" secondItem="j7W-0k-c0Y" secondAttribute="leading" id="aIb-JI-Uh5"/>
+                            <constraint firstItem="6vZ-Aj-9EU" firstAttribute="top" secondItem="j7W-0k-c0Y" secondAttribute="top" id="cW8-kM-Qj2"/>
                             <constraint firstItem="F4f-7K-f78" firstAttribute="top" secondItem="8WN-9d-Npy" secondAttribute="bottom" constant="5" id="i7V-BZ-Nh5"/>
                             <constraint firstAttribute="height" constant="180" id="oqJ-Pk-xfU"/>
+                            <constraint firstItem="6vZ-Aj-9EU" firstAttribute="trailing" secondItem="j7W-0k-c0Y" secondAttribute="trailing" id="pPS-vU-c0L"/>
                             <constraint firstAttribute="trailing" secondItem="j7W-0k-c0Y" secondAttribute="trailing" constant="15" id="teT-ya-R1u"/>
+                            <constraint firstItem="6vZ-Aj-9EU" firstAttribute="bottom" secondItem="j7W-0k-c0Y" secondAttribute="bottom" id="tgG-wE-oRN"/>
                             <constraint firstItem="8WN-9d-Npy" firstAttribute="leading" secondItem="uad-07-rdU" secondAttribute="leading" constant="10" id="u5A-Y2-R4t"/>
                             <constraint firstItem="8WN-9d-Npy" firstAttribute="top" secondItem="uad-07-rdU" secondAttribute="top" constant="20" id="u8a-ch-8rk"/>
                             <constraint firstItem="j7W-0k-c0Y" firstAttribute="top" secondItem="uad-07-rdU" secondAttribute="top" constant="20" id="x9G-s9-prc"/>
@@ -138,6 +145,7 @@
                 <outlet property="collectionView" destination="JtA-di-Il8" id="sg3-Kc-aLH"/>
                 <outlet property="findDoctorButton" destination="CPv-vh-3fs" id="2fk-Oi-EkC"/>
                 <outlet property="pageControl" destination="49Q-WL-oqg" id="5Qt-He-8VV"/>
+                <outlet property="profileImageButton" destination="6vZ-Aj-9EU" id="Fhl-kP-eg9"/>
             </connections>
             <point key="canvasLocation" x="-177" y="42"/>
         </tableViewCell>

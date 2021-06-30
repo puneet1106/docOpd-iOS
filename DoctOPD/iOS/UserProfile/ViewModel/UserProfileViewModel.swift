@@ -1,23 +1,24 @@
 //
-//  OTPViewModel.swift
+//  UserProfileViewModel.swift
 //  DoctOPD (iOS)
 //
-//  Created by Puneet on 23/06/21.
+//  Created by Puneet on 30/06/21.
 //
+
 
 import Foundation
 import Alamofire
 
-class OTPViewModel {
+class UserProfileViewModel {
     
     var errorCallBack:((String)->())?
     
-    var model: OTPModel?{
+    var model: UserPoliciesModel?{
         didSet {
             print("Login Status code =", model?.status ?? 0)
         }
     }
-    
+
     /// Count your data in model
     var count: Int = 0
     
@@ -59,9 +60,8 @@ class OTPViewModel {
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
-    var didGetData: (() -> ())?
-    var userNotRegisteredCallack:(()->())?
-    
+    var didGetUserInsuranceListData: (() -> ())?
+
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
@@ -74,7 +74,7 @@ class OTPViewModel {
     }
     
     //MARK: -- Example Func
-    func bindOTPVerifyData(requestUrl: URL, parameters:[String: String]) {
+    func bindGetUserInsuranceListData(requestUrl: URL, parameters:[String: String]) {
         
         switch Reach().connectionStatus() {
         case .offline:
@@ -89,17 +89,9 @@ class OTPViewModel {
                     print("result is \(String(describing: response.result.value))")
                     do {
                         
-                        let model = try JSONDecoder().decode(OTPModel.self, from: response.data!)
-                        print("model is\(model)")
-                        if let userId = model.user?.userId {
-                            UserDefaults.standard.setValue(userId, forKey: "userId")
-                            UserDefaults.standard.synchronize()
-                        }
-                        if let userModel = model.user {
-                            OPTUtilities.sharedInstance.saveUserData(model: userModel)
-                        }
+                        let model = try JSONDecoder().decode(UserPoliciesModel.self, from: response.data!)
                         self.model = model
-                        self.didGetData?()
+                        self.didGetUserInsuranceListData?()
                     } catch let error as NSError {
                         print(String(describing: error))
                     }
@@ -120,6 +112,4 @@ class OTPViewModel {
     
 }
 
-extension OTPViewModel {
-    
-}
+

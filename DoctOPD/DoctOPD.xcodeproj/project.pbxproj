@@ -184,6 +184,11 @@
 		DD71BB69268BCC45004C2088 /* EMIOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB68268BCC45004C2088 /* EMIOptionViewModel.swift */; };
 		DD71BB6D268BCC58004C2088 /* EMIOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB6C268BCC58004C2088 /* EMIOptionModel.swift */; };
 		DD71BB74268BD032004C2088 /* MedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB73268BD032004C2088 /* MedicinesViewController.swift */; };
+		DD71BB87268BEC6F004C2088 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB86268BEC6F004C2088 /* UserProfileViewController.swift */; };
+		DD71BB8D268BEC84004C2088 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB8C268BEC84004C2088 /* UserProfileViewModel.swift */; };
+		DD71BB91268BF4A6004C2088 /* UserPoliciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB90268BF4A6004C2088 /* UserPoliciesModel.swift */; };
+		DD71BB96268BF8FA004C2088 /* PolicyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB94268BF8FA004C2088 /* PolicyDetailCell.swift */; };
+		DD71BB97268BF8FA004C2088 /* PolicyDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD71BB95268BF8FA004C2088 /* PolicyDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -380,6 +385,11 @@
 		DD71BB68268BCC45004C2088 /* EMIOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOptionViewModel.swift; sourceTree = "<group>"; };
 		DD71BB6C268BCC58004C2088 /* EMIOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOptionModel.swift; sourceTree = "<group>"; };
 		DD71BB73268BD032004C2088 /* MedicinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesViewController.swift; sourceTree = "<group>"; };
+		DD71BB86268BEC6F004C2088 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		DD71BB8C268BEC84004C2088 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		DD71BB90268BF4A6004C2088 /* UserPoliciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoliciesModel.swift; sourceTree = "<group>"; };
+		DD71BB94268BF8FA004C2088 /* PolicyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDetailCell.swift; sourceTree = "<group>"; };
+		DD71BB95268BF8FA004C2088 /* PolicyDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PolicyDetailCell.xib; sourceTree = "<group>"; };
 		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -442,6 +452,7 @@
 		DD0752B2267E14690098EB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD71BB81268BEC3B004C2088 /* UserProfile */,
 				DD71BB32268A627A004C2088 /* SearchDoctorModule */,
 				DD2ED69A2687C7DC00D1B9C4 /* DoctorProfile */,
 				DD0754772682A5A40098EB81 /* TabBar */,
@@ -976,6 +987,50 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		DD71BB81268BEC3B004C2088 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB85268BEC5D004C2088 /* View */,
+				DD71BB84268BEC58004C2088 /* Model */,
+				DD71BB83268BEC50004C2088 /* ViewModel */,
+				DD71BB82268BEC46004C2088 /* ViewController */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		DD71BB82268BEC46004C2088 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB86268BEC6F004C2088 /* UserProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD71BB83268BEC50004C2088 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB8C268BEC84004C2088 /* UserProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD71BB84268BEC58004C2088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB90268BF4A6004C2088 /* UserPoliciesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD71BB85268BEC5D004C2088 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD71BB94268BF8FA004C2088 /* PolicyDetailCell.swift */,
+				DD71BB95268BF8FA004C2088 /* PolicyDetailCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1060,6 +1115,7 @@
 			files = (
 				DD5C1B6026878ED400266745 /* Psychotherapist.jpg in Resources */,
 				DD5C1B8B26878EF600266745 /* Interventional-Cardiologist.jpg in Resources */,
+				DD71BB97268BF8FA004C2088 /* PolicyDetailCell.xib in Resources */,
 				DD5C1B4526878ED400266745 /* Ophthalmologist.jpg in Resources */,
 				DD5C1B7926878EE100266745 /* Head-and-Neck-Surgeon.jpg in Resources */,
 				DD5C1B4E26878ED400266745 /* Pathologist.jpg in Resources */,
@@ -1240,6 +1296,7 @@
 				DD0754302681DCD80098EB81 /* UIView+Toast.m in Sources */,
 				DD71BB3E268A6C76004C2088 /* SearchDoctorViewModel.swift in Sources */,
 				DD07545C26827A450098EB81 /* PasswordViewModel.swift in Sources */,
+				DD71BB87268BEC6F004C2088 /* UserProfileViewController.swift in Sources */,
 				DD07546426827A5E0098EB81 /* PasswordModel.swift in Sources */,
 				DD71BB3A268A6C5A004C2088 /* SearchDoctorViewController.swift in Sources */,
 				DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */,
@@ -1250,6 +1307,8 @@
 				DD71BB61268BBDC0004C2088 /* EMIOptionViewController.swift in Sources */,
 				DD71BB74268BD032004C2088 /* MedicinesViewController.swift in Sources */,
 				DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */,
+				DD71BB8D268BEC84004C2088 /* UserProfileViewModel.swift in Sources */,
+				DD71BB96268BF8FA004C2088 /* PolicyDetailCell.swift in Sources */,
 				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
 				DD075486268351EB0098EB81 /* TermsCondition_VC.swift in Sources */,
 				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
@@ -1282,6 +1341,7 @@
 				DD5C1AB12687194F00266745 /* CategoryCollectionCell.swift in Sources */,
 				DD0753CE268146970098EB81 /* OPTUtilities.swift in Sources */,
 				DD075301267E16460098EB81 /* SignUpViewController.swift in Sources */,
+				DD71BB91268BF4A6004C2088 /* UserPoliciesModel.swift in Sources */,
 				DD5C1A872686752500266745 /* HomeViewController.swift in Sources */,
 				DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */,
 				DD71BB45268A8004004C2088 /* SearchCategoryCell.swift in Sources */,

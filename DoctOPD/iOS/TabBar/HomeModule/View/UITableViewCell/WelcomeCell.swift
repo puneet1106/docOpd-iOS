@@ -16,6 +16,7 @@ protocol CollectionViewCellDelegate: class {
 
 class WelcomeCell: UITableViewCell {
     
+    @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var backgroundInfoView: UIView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!

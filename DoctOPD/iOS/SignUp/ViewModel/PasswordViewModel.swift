@@ -96,6 +96,9 @@ class PasswordViewModel {
                             UserDefaults.standard.setValue(userId, forKey: "userId")
                             UserDefaults.standard.synchronize()
                         }
+                        if let userModel = model.user {
+                            OPTUtilities.sharedInstance.saveUserData(model: userModel)
+                        }
                         self.model = model
                         self.didGetData?()
                     } catch let error as NSError {

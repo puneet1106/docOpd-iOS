@@ -74,6 +74,7 @@ struct APPConstants {
     
     struct ProfileScreen {
         static let DOCTOR_INFO_SCREEN = "DoctorProfileViewController"
+        static let USER_INFO_SCREEN = "UserProfileViewController"
     }
     
     struct SearchDoctorScreen {
@@ -85,7 +86,7 @@ struct APPConstants {
     }
     
     struct OTPScreen {
-        static let Enter_Code_Msg = "Please enter the 4-digit code sent to you at "
+        static let Enter_Code_Msg = "Please enter the 6-digit code sent to you at "
     }
     
     struct PasswordScreen {
@@ -1259,6 +1260,7 @@ struct APPConstants {
         static let findDoctors = "http://www.doctopd.com/doctopd/api/find-doctors"
         static let shortListDoctor = "http://www.doctopd.com/doctopd/api/shortlist-doctor"
         static let getUserConsent = "http://www.doctopd.com/doctopd/api/save-user-consent"
+        static let getUserInsuranceInfo = "http://www.doctopd.com/doctopd/api/get-user-policy"
     }
     
     struct HomeInsuranceScreenInfoSection {

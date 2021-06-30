@@ -135,6 +135,11 @@ class HomeViewController: UIViewController {
         self.tabBarController?.selectedIndex = 1
     }
     
+    @objc func navigateToProfile() {
+        let storyboard = UIStoryboard(name: APPConstants.StoryboardIdentifiers.PROFILE, bundle: nil)
+        let newView = storyboard.instantiateViewController(withIdentifier: APPConstants.ProfileScreen.USER_INFO_SCREEN) as! UserProfileViewController
+        self.navigationController?.pushViewController(newView, animated: true)    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -205,6 +210,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.inventoryData = self.viewModel.bannerModel?.inventory ?? []
                 cell.selectionStyle = .none
                 cell.findDoctorButton.addTarget(self, action: #selector(switchToSearchTab), for: .touchUpInside)
+                cell.profileImageButton.addTarget(self, action: #selector(navigateToProfile), for: .touchUpInside)
                 return cell
            }
         } else if indexPath.section == 1 {
