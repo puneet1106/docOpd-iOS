@@ -144,11 +144,14 @@ class DoctorProfileViewController: UIViewController {
             return
         }
 
-        let requestParam : [String: String] = ["profileId":"\(doctorId)", "userId": "\(userId)"]
+        var requestParam : [String: String] = [:]
         
         if isShortlistedDoctor {
+            requestParam = ["profileId":"\(doctorId)", "userId": "\(userId)", "status": "0"]
             isShortlistedDoctor = false
+            
         } else {
+            requestParam = ["profileId":"\(doctorId)", "userId": "\(userId)", "status": "1"]
             isShortlistedDoctor = true
         }
         self.viewModel.bindShortlistDoctor(requestUrl: requestUrl, parameters: requestParam)

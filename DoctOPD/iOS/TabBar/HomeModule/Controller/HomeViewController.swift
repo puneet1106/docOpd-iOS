@@ -29,11 +29,11 @@ class HomeViewController: UIViewController {
         setupViewModel()
         fetchBannerList()
         fetchCategoryList()
-        fetchShortlistedDoctor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        fetchShortlistedDoctor()
         
     }
     
