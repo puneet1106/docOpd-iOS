@@ -29,16 +29,19 @@ struct CategoryList: Codable {
 
 struct CategoryItem: Codable {
     var name: String?
+    var image: String?
     var categoryId: Int?
 
     enum CodingKeys: String, CodingKey {
         case name
+        case image
         case categoryId
     }
 
     init(from decoder: Decoder) throws  {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.image = try container.decodeIfPresent(String.self, forKey: .image)
         self.categoryId = try container.decodeIfPresent(Int.self, forKey: .categoryId)
     }
 }

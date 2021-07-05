@@ -56,6 +56,14 @@
 		DD2ED6B72687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2ED6B52687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift */; };
 		DD2ED6B82687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2ED6B62687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib */; };
 		DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2ED6BB26885E4C00D1B9C4 /* BannerList.swift */; };
+		DD49F412268E650E00072C2A /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F411268E650E00072C2A /* MoreViewController.swift */; };
+		DD49F43A26919A8700072C2A /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F43826919A8700072C2A /* MoreCell.swift */; };
+		DD49F43B26919A8700072C2A /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD49F43926919A8700072C2A /* MoreCell.xib */; };
+		DD49F44D26922FB900072C2A /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F44C26922FB900072C2A /* InviteFriendsViewController.swift */; };
+		DD49F45126923DC100072C2A /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F45026923DC100072C2A /* MoreViewModel.swift */; };
+		DD49F45526924B2600072C2A /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F45426924B2600072C2A /* MoreModel.swift */; };
+		DD49F45A2692545C00072C2A /* UserProflieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49F4592692545C00072C2A /* UserProflieHeaderView.swift */; };
+		DD49F4602692546A00072C2A /* UserProflieHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD49F45F2692546A00072C2A /* UserProflieHeaderView.xib */; };
 		DD5C1A872686752500266745 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C1A862686752500266745 /* HomeViewController.swift */; };
 		DD5C1A90268684DF00266745 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C1A8E268684DF00266745 /* WelcomeCell.swift */; };
 		DD5C1A91268684DF00266745 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5C1A8F268684DF00266745 /* WelcomeCell.xib */; };
@@ -189,6 +197,9 @@
 		DD71BB91268BF4A6004C2088 /* UserPoliciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB90268BF4A6004C2088 /* UserPoliciesModel.swift */; };
 		DD71BB96268BF8FA004C2088 /* PolicyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD71BB94268BF8FA004C2088 /* PolicyDetailCell.swift */; };
 		DD71BB97268BF8FA004C2088 /* PolicyDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD71BB95268BF8FA004C2088 /* PolicyDetailCell.xib */; };
+		DD8A5C162692EDCE00732193 /* InviteFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A5C152692EDCE00732193 /* InviteFriendViewModel.swift */; };
+		DD8A5C1A2692F00700732193 /* RedeemPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A5C192692F00700732193 /* RedeemPointsViewController.swift */; };
+		DD8A5C2C269392AF00732193 /* RedeemPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A5C2B269392AF00732193 /* RedeemPointViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +268,14 @@
 		DD2ED6B52687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAvailabilityInfoCell.swift; sourceTree = "<group>"; };
 		DD2ED6B62687EC0400D1B9C4 /* DoctorAvailabilityInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorAvailabilityInfoCell.xib; sourceTree = "<group>"; };
 		DD2ED6BB26885E4C00D1B9C4 /* BannerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerList.swift; sourceTree = "<group>"; };
+		DD49F411268E650E00072C2A /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		DD49F43826919A8700072C2A /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		DD49F43926919A8700072C2A /* MoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCell.xib; sourceTree = "<group>"; };
+		DD49F44C26922FB900072C2A /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
+		DD49F45026923DC100072C2A /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
+		DD49F45426924B2600072C2A /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
+		DD49F4592692545C00072C2A /* UserProflieHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProflieHeaderView.swift; sourceTree = "<group>"; };
+		DD49F45F2692546A00072C2A /* UserProflieHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProflieHeaderView.xib; sourceTree = "<group>"; };
 		DD5C1A862686752500266745 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DD5C1A8E268684DF00266745 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		DD5C1A8F268684DF00266745 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
@@ -390,6 +409,9 @@
 		DD71BB90268BF4A6004C2088 /* UserPoliciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoliciesModel.swift; sourceTree = "<group>"; };
 		DD71BB94268BF8FA004C2088 /* PolicyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDetailCell.swift; sourceTree = "<group>"; };
 		DD71BB95268BF8FA004C2088 /* PolicyDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PolicyDetailCell.xib; sourceTree = "<group>"; };
+		DD8A5C152692EDCE00732193 /* InviteFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendViewModel.swift; sourceTree = "<group>"; };
+		DD8A5C192692F00700732193 /* RedeemPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemPointsViewController.swift; sourceTree = "<group>"; };
+		DD8A5C2B269392AF00732193 /* RedeemPointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemPointViewModel.swift; sourceTree = "<group>"; };
 		EF06DF8125670BDEB7756E07 /* Pods_DoctOPD__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctOPD__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -617,6 +639,7 @@
 		DD0754772682A5A40098EB81 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				DD49F40C268E64BA00072C2A /* MoreModule */,
 				DD71BB71268BCFFD004C2088 /* MedicinesModule */,
 				DD71BB5B268BBD84004C2088 /* EMI Module */,
 				DD0754782682A5CE0098EB81 /* TabBarContollerClass.swift */,
@@ -685,6 +708,72 @@
 				DD2ED6AB2687C8F100D1B9C4 /* DoctorProfileModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD49F40C268E64BA00072C2A /* MoreModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F410268E64E500072C2A /* View */,
+				DD49F40F268E64D500072C2A /* Model */,
+				DD49F40E268E64CE00072C2A /* ViewModel */,
+				DD49F40D268E64C500072C2A /* ViewController */,
+			);
+			path = MoreModule;
+			sourceTree = "<group>";
+		};
+		DD49F40D268E64C500072C2A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F411268E650E00072C2A /* MoreViewController.swift */,
+				DD49F44C26922FB900072C2A /* InviteFriendsViewController.swift */,
+				DD8A5C192692F00700732193 /* RedeemPointsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD49F40E268E64CE00072C2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F45026923DC100072C2A /* MoreViewModel.swift */,
+				DD8A5C152692EDCE00732193 /* InviteFriendViewModel.swift */,
+				DD8A5C2B269392AF00732193 /* RedeemPointViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD49F40F268E64D500072C2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F45426924B2600072C2A /* MoreModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD49F410268E64E500072C2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F4582692543500072C2A /* SectionHeader */,
+				DD49F43726919A6500072C2A /* UITableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD49F43726919A6500072C2A /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F43826919A8700072C2A /* MoreCell.swift */,
+				DD49F43926919A8700072C2A /* MoreCell.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		DD49F4582692543500072C2A /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				DD49F4592692545C00072C2A /* UserProflieHeaderView.swift */,
+				DD49F45F2692546A00072C2A /* UserProflieHeaderView.xib */,
+			);
+			path = SectionHeader;
 			sourceTree = "<group>";
 		};
 		DD5C1A812686705700266745 /* HomeModule */ = {
@@ -1155,6 +1244,7 @@
 				DD5C1B5A26878ED400266745 /* Paediatric-Intensivist.jpg in Resources */,
 				DD5C1B5C26878ED400266745 /* Spine-And-Pain-Specialist.jpg in Resources */,
 				DD5C1B4F26878ED400266745 /* Public-Health-Dentist.jpg in Resources */,
+				DD49F43B26919A8700072C2A /* MoreCell.xib in Resources */,
 				DD5C1B9026878EF600266745 /* Spine-Surgeon.jpeg in Resources */,
 				DD5C1AE526878E9D00266745 /* Counselling-Psychologist.jpg in Resources */,
 				DD71BB46268A8004004C2088 /* SearchCategoryCell.xib in Resources */,
@@ -1206,6 +1296,7 @@
 				DD5C1B0A26878EB600266745 /* Neurologist.jpg in Resources */,
 				DD5C1AEC26878E9D00266745 /* Dentist 2.jpg in Resources */,
 				DD5C1B5626878ED400266745 /* Restorative-Dentist.jpg in Resources */,
+				DD49F4602692546A00072C2A /* UserProflieHeaderView.xib in Resources */,
 				DD5C1B4B26878ED400266745 /* Radiation-Oncologist.jpg in Resources */,
 				DD5C1ADF26878E9D00266745 /* Andrologist.jpg in Resources */,
 				DD5C1B1126878EB600266745 /* ENT.jpg in Resources */,
@@ -1290,6 +1381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD49F412268E650E00072C2A /* MoreViewController.swift in Sources */,
 				DD2ED6B12687E4B800D1B9C4 /* DoctorProfileDescriptionCell.swift in Sources */,
 				DD5C1A90268684DF00266745 /* WelcomeCell.swift in Sources */,
 				DD5C1AAB2687193200266745 /* CategoryCell.swift in Sources */,
@@ -1297,6 +1389,7 @@
 				DD71BB3E268A6C76004C2088 /* SearchDoctorViewModel.swift in Sources */,
 				DD07545C26827A450098EB81 /* PasswordViewModel.swift in Sources */,
 				DD71BB87268BEC6F004C2088 /* UserProfileViewController.swift in Sources */,
+				DD8A5C1A2692F00700732193 /* RedeemPointsViewController.swift in Sources */,
 				DD07546426827A5E0098EB81 /* PasswordModel.swift in Sources */,
 				DD71BB3A268A6C5A004C2088 /* SearchDoctorViewController.swift in Sources */,
 				DD0754792682A5CE0098EB81 /* TabBarContollerClass.swift in Sources */,
@@ -1305,10 +1398,15 @@
 				DD0753AB2681210D0098EB81 /* OnboardingThirdViewController.swift in Sources */,
 				DD075470268285C30098EB81 /* SignInModel.swift in Sources */,
 				DD71BB61268BBDC0004C2088 /* EMIOptionViewController.swift in Sources */,
+				DD49F45526924B2600072C2A /* MoreModel.swift in Sources */,
 				DD71BB74268BD032004C2088 /* MedicinesViewController.swift in Sources */,
 				DD0754542682734D0098EB81 /* PasswordViewController.swift in Sources */,
 				DD71BB8D268BEC84004C2088 /* UserProfileViewModel.swift in Sources */,
+				DD49F43A26919A8700072C2A /* MoreCell.swift in Sources */,
 				DD71BB96268BF8FA004C2088 /* PolicyDetailCell.swift in Sources */,
+				DD8A5C162692EDCE00732193 /* InviteFriendViewModel.swift in Sources */,
+				DD49F45A2692545C00072C2A /* UserProflieHeaderView.swift in Sources */,
+				DD49F44D26922FB900072C2A /* InviteFriendsViewController.swift in Sources */,
 				DD0753A7268120FE0098EB81 /* OnboardingSecondViewController.swift in Sources */,
 				DD075486268351EB0098EB81 /* TermsCondition_VC.swift in Sources */,
 				DD0753D1268146970098EB81 /* OPTViewController.swift in Sources */,
@@ -1344,6 +1442,7 @@
 				DD71BB91268BF4A6004C2088 /* UserPoliciesModel.swift in Sources */,
 				DD5C1A872686752500266745 /* HomeViewController.swift in Sources */,
 				DD2ED6BC26885E4C00D1B9C4 /* BannerList.swift in Sources */,
+				DD49F45126923DC100072C2A /* MoreViewModel.swift in Sources */,
 				DD71BB45268A8004004C2088 /* SearchCategoryCell.swift in Sources */,
 				DD0753D2268146970098EB81 /* OPTServerConstants.swift in Sources */,
 				DD2ED6A82687C8E300D1B9C4 /* DoctorProfileViewModel.swift in Sources */,
@@ -1352,6 +1451,7 @@
 				DD0753A3268120EA0098EB81 /* OnboardingFirstViewController.swift in Sources */,
 				DD0753B32681288E0098EB81 /* PageControlViewController.swift in Sources */,
 				DD5C1AA22686A26600266745 /* CategoryList.swift in Sources */,
+				DD8A5C2C269392AF00732193 /* RedeemPointViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

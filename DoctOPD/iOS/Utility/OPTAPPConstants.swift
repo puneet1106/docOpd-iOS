@@ -101,6 +101,25 @@ struct APPConstants {
         
     }
     
+    struct RedeemPointsScreen {
+        static let REDEEDM_POINTS_SCREEN = "RedeemPointsViewController"
+        static let NO_POLICY_TEXT = "You haven't purchase any policy from DoctOPD. Please buy policy to get eligible for redeeming your points."
+        static let Description_RedeemPoints = "Rewinding reward points: few steps to follow</strong><br /><br />If you like taking a regular and frequent insurance policy and using Doctopd for an acquaintance\'s insurance plan, you enjoy many benefits. Apart from the ease of use and convenience, one of the most popular benefits of using the application are the reward points. Reward points are points or credits deposited in your name for a specific frequency or transaction volume.</p> <p><br />Reward points are basically used to encourage more use of the application. Once you accumulate specific points, you are given a reward or some benefit. These benefits are often in the form of rebates or OPD cashback.</p> <p><strong>How to redeem reward points?</strong></p> <p>Once you win specific reward points, it is important to redeem them. Generally, reward points are easy to redeem. They can be redeemed online, following an easy process.</p> <p>Online redemption is the most convenient way to redeem your reward points as it can be done without calling the customer care department of the application. Most applications offer you home delivery of products purchased online against reward points.</p> <p>You can also convert these points to OPD Cash and use them to buy medicines. If you take any type of medicine continuously then it can prove to be beneficial for you.</p> <p>Some loyalty programs offer a point-plus-pay option, in which you can use the points and pay the balance. While some other programs offer some discounts on annual insurance policy premiums in exchange for reward points.</p> <p>Reward points earned on some applications allow you to accumulate in the same pool, and you can redeem them simultaneously.</p> <p>If you want to capitalize on your points with Doctopd, here are some steps to follow-</p> <p>Log your bank account number, Paytm account number on Doctopd\'s website.</p> <p>Select the number of the policy for which you want to redeem all Rewards Points! Now you can redeem reward points.</p> <div><strong>Redeem Point calculation:</strong></div> <div>&nbsp;</div> <div>You can understand the calculation to find the total redeem with the help of the below example.</div> <div>For Example:</div> <div>&nbsp;</div> <div>1) User A share DoctOPD app with his/her friends with his/her referral code to user B. and User B enter the referral code of user A in his DoctOPD account under redeem and referral section of DoctOPD app. Then both users A &amp; B user earn 100 points for successful referrals.</div> <div>&nbsp;</div> <div>2) If the user has already got an insurance premium from DoctOPD. then the sum of premium paid for all the policies listed under My Policies in the Profile section of DoctOPD is added to the user\'s redeem points. eg. total sum premium is Rs 10,000 then 10,000 will be added to the total redeem points.</div> <div>&nbsp;</div> <div>3) The total redeem points will be the sum of points mention in Step 1 and Step 2.&nbsp;</div> <div>&nbsp; &nbsp; Eg. For user A total of points 10100 ( 100 Points (Step 1) + 10000 Points (Step 2) )&nbsp;&nbsp;</div> <div>&nbsp;</div> <div>4) User can request DoctOPD to redeem these points and the amount will be paid to you through any electronic means like your bank account, Paytm, etc.</div> <div>&nbsp;</div> <div>5) Each DoctOPD point is equivalent to Rs. 0.03. for User A the total amount the user can get is Rs. 303.00 (10100 Points (Step 3) *&nbsp; 0.03(Single Point Value))</div> <div dir=\"auto\">&nbsp;</div> <p><strong>When you cannot redeem reward points</strong><br /><br />* If you have taken the EMI option during the renewal of your policy, you cannot redeem the reward points as long as the EMI is in operation.<br />* To redeem reward points, you will have to take one health policy through us.<br />* If you have downloaded the application and after one or two years, why did you not take the policy from us, we will still give you the full benefit of your reward points.<br />* One or millions of your reward points is your possession with us, which you can redeem at any time during your lifetime.<br />* The feature redeeming EMI options and reward points will be applied only if you have taken the policy from us.<br />* Your PAN card number.</p> <p><strong>Read about the various benefits of the application here.</strong><br /><br />* You can find the information of your doctor in your area.<br />* You can choose the EMI option at the time of renewal of your policy without any interest.<br />* You can earn reward points by downloading the application to your friends or relatives.<br />* If someone who downloaded the application from you took the policy from us, then you will get the same reward points as the person got in lieu of that policy.<br />* We are giving you all the policies taken by you in a digital file. Which you can watch and download anytime.<br />* You can get life insurance, health insurance, your motor insurance, home insurance, factory insurance, travel insurance, keyman insurance, etc. with a health policy from us or get information about that.<br />* Whenever you ask any question regarding insurance, we will give you the appropriate information.</p> <p>* <strong>Terms and Conditions apply.</strong><br /><br />The approval of redeeming points, OPD cash, and EMI options are at the sole discretion of the DoctOPD application.</p>"
+        
+    }
+    
+    struct InViteFriendScreen {
+        static let INVITEFRIEND_FIELD_PLACEHOLDER = "Enter Invite Code"
+        static let INVITEFRIENDS_Controller = "InviteFriendsViewController"
+        static let Description_InviteFriend = "How It's Works\n\n Redeem Your Points\n\nMake Money Online From Home In 3 Easy Steps You can Earn Money Online by sharing this doctopd with your Friends &amp; Relatives. This is the Best Work From Home opportunity offered by Doctopd App.\n\n1. Download Our App\n\nSimply visit Google Play store and download Doctopd App. Create Your Account.\n\n2. Buy Insurance Policy\n\nBuy a Insurance policy from Doctopd\n\n3. Get Paid\n\nWhen your Friends & Relatives put your Refer code then you and your friend both get 100 points each. You can convert these redeem points in money."
+        static let title1 = "How It's Works"
+        static let title2 = "Redeem Your Points"
+        static let title3 = "Download Our App"
+        static let title4 = "Buy Insurance Policy"
+        static let title5 = "Get Paid"
+
+    }
+    
     
     struct DetailsScreen {
         static let ORDER_DETAILS_SCREEN = "OPTOrderDetailsViewController"
@@ -1256,11 +1275,17 @@ struct APPConstants {
         static let getShortlistedDoctorList = "http://www.doctopd.com/doctopd/api/get-shortlisted-doctor"
         static let doctorImagePathURL = "http://www.doctopd.com/static/images/doctor/"
         static let inventoryImagePathURL = "http://www.doctopd.com/static/images/inventory/"
+        static let categoryImagePathURL = "http://www.doctopd.com/static/images/category/"
         static let getDoctorInfo = "http://www.doctopd.com/doctopd/api/get-doctor-details"
         static let findDoctors = "http://www.doctopd.com/doctopd/api/find-doctors"
         static let shortListDoctor = "http://www.doctopd.com/doctopd/api/shortlist-doctor"
         static let getUserConsent = "http://www.doctopd.com/doctopd/api/save-user-consent"
         static let getUserInsuranceInfo = "http://www.doctopd.com/doctopd/api/get-user-policy"
+        static let getUserPoints = "http://www.doctopd.com/doctopd/api/user-points"
+        static let downloadPDF = "http://www.doctopd.com/doctopd/api/download-policy"
+        static let submitInviteCode = "http://www.doctopd.com/doctopd/api/add-points"
+        static let redeemPoints = "http://www.doctopd.com/doctopd/api/redeem-points"
+
     }
     
     struct HomeInsuranceScreenInfoSection {
@@ -1273,6 +1298,31 @@ struct APPConstants {
 
     }
     
+    struct MenuItemsImage {
+        
+        static let home_menu_icon = "home_menu_icon"
+        static let find_doctor_menu_icon = "find_doctor_menu_icon"
+        static let emi_icon = "emi_icon"
+        static let redeem_points_menu_icon = "redeem_points_menu_icon"
+        static let invite_menu_icon = "invite_menu_icon"
+        static let aboutus_menu_icon = "aboutus_menu_icon"
+        static let terms_menu_icon = "terms_menu_icon"
+        static let settings_menu_icon = "settings_menu_icon"
+        static let logout_menu_icon = "logout_menu_icon"
+    }
+    
+    struct MenuItemsTitle {
+        
+        static let home_title = "Home"
+        static let find_doctor_title = "Find Doctor"
+        static let emi_title = "EMI Option"
+        static let redeem_points_title = "Redeem Points"
+        static let invite_title = "Invite your Friend"
+        static let aboutus_title = "About us & Privacy"
+        static let terms_title = "Terms & Condition"
+        static let settings_title = "Setting"
+        static let logout_title = "Logout"
+    }
     
     
 }

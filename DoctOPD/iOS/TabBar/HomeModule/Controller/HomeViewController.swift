@@ -14,18 +14,16 @@ class HomeViewController: UIViewController {
         
     var viewModel = HomeViewModel()
     var isCategoryListHidden: Bool = true
+    var selectedTabIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        //tableView.rowHeight = UITableView.automaticDimension
-        // Register the xib for tableview cell
         let cellNib = UINib(nibName: "WelcomeCell", bundle: nil)
         self.tableView.register(cellNib, forCellReuseIdentifier: "WelcomeCell")
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
         self.tableView.register(UINib(nibName: "ShortlistedDoctorCell", bundle: nil), forCellReuseIdentifier: "ShortlistedDoctorCell")
         self.tableView.register(UINib(nibName: "AboutDoctOPDCell", bundle: nil), forCellReuseIdentifier: "AboutDoctOPDCell")
-
         setupViewModel()
         fetchBannerList()
         fetchCategoryList()
@@ -138,7 +136,9 @@ class HomeViewController: UIViewController {
     @objc func navigateToProfile() {
         let storyboard = UIStoryboard(name: APPConstants.StoryboardIdentifiers.PROFILE, bundle: nil)
         let newView = storyboard.instantiateViewController(withIdentifier: APPConstants.ProfileScreen.USER_INFO_SCREEN) as! UserProfileViewController
-        self.navigationController?.pushViewController(newView, animated: true)    }
+        self.navigationController?.pushViewController(newView, animated: true)
+        
+    }
     
 }
 

@@ -95,6 +95,12 @@ class SignUpViewModel {
                             UserDefaults.standard.setValue(userId, forKey: "userId")
                             UserDefaults.standard.synchronize()
                         }
+                        
+                        if let inviteCode = model.user?.inviteCode {
+                            UserDefaults.standard.setValue(inviteCode, forKey: "inviteCode")
+                            UserDefaults.standard.synchronize()
+                        }
+                        
                         if let userModel = model.user {
                             OPTUtilities.sharedInstance.saveUserData(model: userModel)
                         }

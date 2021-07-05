@@ -15,6 +15,7 @@ protocol SubmitDataDelegate: class {
 final class OPTUtilities: NSObject {
     private let jsonDecoder = JSONDecoder()
     var sideMenuCustData: [String] = []
+    var showMoreViewController: Bool = false
     var AppObject:AppDelegate
     {
         return UIApplication.shared.delegate as! AppDelegate
@@ -37,6 +38,11 @@ final class OPTUtilities: NSObject {
         }
         return nil
     }
+    
+    func showMenuScreen(show: Bool){
+        self.showMoreViewController = show
+    }
+    
     func printLog<T>(_ object: @autoclosure () -> T, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         let value = object()
         #if DEBUG
@@ -53,6 +59,8 @@ final class OPTUtilities: NSObject {
         print("<\(queue)> \(fileURL) \(function)[\(line)]: " + stringRepresentation)
         #endif
     }
+    
+    
     func getEnvironment() -> String {
         var environment: String = ""
         #if DEVELOPMENT
@@ -101,6 +109,7 @@ final class OPTUtilities: NSObject {
         }
         return nil
     }
+    
     func convertDateToUITime(dateString: String) -> String? {
         // create dateFormatter with UTC time format
         if !dateString.isEmpty {

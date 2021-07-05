@@ -26,9 +26,11 @@ class SearchDoctorViewController: UIViewController {
    
     //
     var viewModel = SearchDoctorViewModel()
+    var doctorProfiles = [DoctorProfile]()
     var categoryItems = [CategoryItem]()
     var selectedCategory = ""
-    
+    var loadingData = false
+    var currentPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,8 @@ class SearchDoctorViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.doctorProfiles.removeAll()
+        currentPage = 0
         backButton.addBorderAndColor(color: UIColor.clear, width: 0.0, corner_radius: 0.5 * backButton.bounds.size.width, clipsToBounds: true)
         print("category count is \(categoryItems.count)")
         if selectedCategory != "" {
@@ -96,8 +100,10 @@ class SearchDoctorViewController: UIViewController {
         
         self.viewModel.didGetSearchDoctorData = { [weak self] in
             if self?.viewModel.model?.status == 200 {
-                self?.totalDoctorsAvailableLabel.text = "We have found \(self?.viewModel.model?.profiles?.count ?? 0) \(String(describing: self?.selectedCategory ?? ""))"
+                self?.totalDoctorsAvailableLabel.text = "We have found \(self?.viewModel.model?.totalItems ?? 0) \(String(describing: self?.selectedCategory ?? ""))"
                 self?.searchDoctorListTableView.isHidden = false
+                self?.doctorProfiles.append(contentsOf: self?.viewModel.model?.profiles ?? [])
+                self?.loadingData = false
                 self?.searchDoctorListTableView.reloadData()
                 //self?.viewModel.model?.profiles?.count
             }
@@ -124,7 +130,7 @@ class SearchDoctorViewController: UIViewController {
             return
         }
         //categoryId=1&location=Delhi
-        let requestParam : [String: String] = ["category": categoryName, "location":"Delhi"]
+        let requestParam : [String: String] = ["category": categoryName, "location":"Delhi", "page": "\(currentPage)"]
         viewModel.bindGetDoctorSearchLitData(requestUrl: requestUrl, parameters: requestParam)
     }
     
@@ -166,7 +172,8 @@ extension SearchDoctorViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return colorsArray.objectsArray[section].subcategory.count
         if tableView == self.searchDoctorListTableView {
-            return self.viewModel.model?.profiles?.count ?? 0
+            return self.doctorProfiles.count
+            //return self.viewModel.model?.profiles?.count ?? 0
         }
         return 1
     }
@@ -184,6 +191,17 @@ extension SearchDoctorViewController: UITableViewDelegate, UITableViewDataSource
         return 0
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (self.viewModel.model?.totalItems ?? 0) > 10 && (viewModel.model?.currentPage ?? 0) < (viewModel.model?.totalPages ?? 0){
+            let lastElement =  (self.doctorProfiles.count) - 2
+            if !loadingData && indexPath.row == lastElement {
+                currentPage += 1
+                loadingData = true
+                fetchSearchDoctorList(categoryName: self.selectedCategory)
+            }
+        }
+      
+    }
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -198,10 +216,11 @@ extension SearchDoctorViewController: UITableViewDelegate, UITableViewDataSource
             if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchDoctorListCell", for: indexPath) as? SearchDoctorListCell {
                 cell.selectionStyle = .none
                 cell.cellDelegate = self
-                if let doctorInfo = self.viewModel.model?.profiles?[indexPath.row] {
+                if self.doctorProfiles.count > 0 {
+                    let doctorInfo = self.doctorProfiles[indexPath.row]
                     cell.setUpUI(doctorInfo: doctorInfo)
                 }
-                
+            
                 cell.outerView.layer.cornerRadius = 5.0
                 cell.outerView.layer.borderWidth = 1.0
                 cell.outerView.layer.borderColor = APPConstants.Colors.CATEGORY_CELL_SHADOW_COLOR.cgColor
@@ -233,6 +252,8 @@ extension SearchDoctorViewController: UITableViewDelegate, UITableViewDataSource
 extension SearchDoctorViewController: SearchCategoryCellDelegate {
     func collectionView(collectionviewcell: SearchCategoryCollectionViewCell?, index: Int, didTappedInTableViewCell: SearchCategoryCell) {
         print("index is \(index)")
+        self.doctorProfiles.removeAll()
+        currentPage = 0
         self.searchDoctorListTableView.isHidden = true
         self.filterButtonActn(self.filterButton)
         self.selectedCategory = CategoryListData.sharedInstance.categoryList?[index].name ?? ""

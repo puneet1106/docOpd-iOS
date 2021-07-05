@@ -65,7 +65,7 @@ class WelcomeCell: UITableViewCell {
         self.contentView.addSubview(pageControl)
         self.pageControl.pageIndicatorTintColor =  UIColor.systemGray2
         pageControl.currentPageIndicatorTintColor = APPConstants.Colors.BUTTON_BG_COLOR
-        startTimer()
+        //startTimer()
     }
     
     func startTimer() {

@@ -15,6 +15,7 @@ class TermsCondition_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         self.title  =   navigationtitle
         myActivityIndicator.startAnimating()
         webView.uiDelegate = self

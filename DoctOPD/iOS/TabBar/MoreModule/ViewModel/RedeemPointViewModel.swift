@@ -1,22 +1,28 @@
 //
-//  PasswordViewModel.swift
+//  RedeemPointViewModel.swift
 //  DoctOPD (iOS)
 //
-//  Created by Puneet on 23/06/21.
+//  Created by Puneet on 06/07/21.
 //
 
 import Foundation
 import Alamofire
 
-class PasswordViewModel {
+class RedeemPointViewModel {
     
     var errorCallBack:((String)->())?
     
-    var model: PasswordModel?{
+    var userPolicyModel: UserPoliciesModel?{
         didSet {
-            print("Login Status code =", model?.status ?? 0)
+            print("Login Status code =", userPolicyModel?.status ?? 0)
         }
     }
+    
+//    var model: MoreModel?{
+//        didSet {
+//            print("Login Status code =", model?.status ?? 0)
+//        }
+//    }
     
     /// Count your data in model
     var count: Int = 0
@@ -51,16 +57,14 @@ class PasswordViewModel {
         }
     }
     
-    /// Define selected model
-    var selectedObject: PasswordModel?
-    
     //MARK: -- Closure Collection
     var showAlertClosure: (() -> ())?
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
     var didGetData: (() -> ())?
-    var userNotRegisteredCallack:(()->())?
+    var didGetPolicyData: (() -> ())?
+
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
@@ -74,7 +78,7 @@ class PasswordViewModel {
     }
     
     //MARK: -- Example Func
-    func bindPasswordVerifyData(requestUrl: URL, parameters:[String: String]) {
+    func bindSubmitRedeemRewardPoints(requestUrl: URL, parameters:[String: String]) {
         
         switch Reach().connectionStatus() {
         case .offline:
@@ -82,32 +86,60 @@ class PasswordViewModel {
             self.internetConnectionStatus?()
         case .online:
             self.isLoading = true
-            
-            
+            Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
+                self.isLoading = false
+                switch response.result {
+                case .success:
+                    let result = response.result.value
+                    do {
+                       /* let model = try JSONDecoder().decode(MoreModel.self, from: response.data!)
+                        print("model is\(model)")
+                       
+                        self.model = model*/
+                        self.didGetData?()
+                    } catch let error as NSError {
+                        print(String(describing: error))
+                    }
+                    
+                    /*
+                     self?.isLoading = false
+                     self?.model = response
+                     self?.didGetData?()*/
+                    print(result)
+                case .failure(let error):
+                    let responseString = String(data: response.data ?? Data(), encoding:.utf8)
+                    print("error description\(error.localizedDescription)")
+                //                self.alertMessage   =   error
+                default:
+                    break
+                    
+                }
+            }
+        default:
+            break
+        }
+    }
+    
+    
+    //MARK: -- Example Func
+    func bindGetUserInsuranceListData(requestUrl: URL, parameters:[String: String]) {
+        
+        switch Reach().connectionStatus() {
+        case .offline:
+            self.isDisconnected = true
+            self.internetConnectionStatus?()
+        case .online:
+            self.isLoading = true
             Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
                 self.isLoading = false
                 switch response.result {
                 case .success:
                     print("result is \(String(describing: response.result.value))")
                     do {
-                        let model = try JSONDecoder().decode(PasswordModel.self, from: response.data!)
-                        print("model is\(model)")
-                        if let userId = model.user?.userId {
-                            UserDefaults.standard.setValue(userId, forKey: "userId")
-                            UserDefaults.standard.synchronize()
-                        }
                         
-                        if let inviteCode = model.user?.inviteCode {
-                            UserDefaults.standard.setValue(inviteCode, forKey: "inviteCode")
-                            UserDefaults.standard.synchronize()
-                        }
-
-                        
-                        if let userModel = model.user {
-                            OPTUtilities.sharedInstance.saveUserData(model: userModel)
-                        }
-                        self.model = model
-                        self.didGetData?()
+                        let model = try JSONDecoder().decode(UserPoliciesModel.self, from: response.data!)
+                        self.userPolicyModel = model
+                        self.didGetPolicyData?()
                     } catch let error as NSError {
                         print(String(describing: error))
                     }
@@ -125,9 +157,5 @@ class PasswordViewModel {
             break
         }
     }
-    
-}
-
-extension PasswordViewModel {
     
 }

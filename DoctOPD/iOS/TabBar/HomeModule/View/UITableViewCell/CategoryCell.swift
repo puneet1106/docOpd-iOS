@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol CategoryCellDelegate: class {
     func didTapSeeAll(isHide: Bool)
@@ -97,7 +98,11 @@ extension CategoryCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionCell", for: indexPath) as? CategoryCollectionCell {
             cell.categoryLabel.text = self.categoryList[indexPath.row].name
-            let nameArray = self.categoryList[indexPath.row].name?.components(separatedBy: " ")
+            if let imageName = self.categoryList[indexPath.row].image {
+                let imageUrl = APPConstants.APIPath.categoryImagePathURL + imageName
+                cell.backgroundImageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+            }
+           /* let nameArray = self.categoryList[indexPath.row].name?.components(separatedBy: " ")
             if nameArray?.count ?? 0 > 1 {
                 let name = nameArray?.joined(separator: "-")
                 if let imgPath = Bundle.main.path(forResource: name, ofType: ".jpg")
@@ -110,7 +115,7 @@ extension CategoryCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
                 {
                     cell.backgroundImageView.image = UIImage(contentsOfFile: imgPath)
                 }
-            }
+            }*/
             
             cell.outerView.layer.cornerRadius = 5.0
             cell.outerView.layer.borderWidth = 1.0

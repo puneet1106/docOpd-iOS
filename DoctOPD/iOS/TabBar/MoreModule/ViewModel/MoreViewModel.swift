@@ -1,18 +1,19 @@
 //
-//  PasswordViewModel.swift
+//  MoreViewModel.swift
 //  DoctOPD (iOS)
 //
-//  Created by Puneet on 23/06/21.
+//  Created by Puneet on 05/07/21.
 //
+
 
 import Foundation
 import Alamofire
 
-class PasswordViewModel {
+class MoreViewModel {
     
     var errorCallBack:((String)->())?
     
-    var model: PasswordModel?{
+    var model: MoreModel?{
         didSet {
             print("Login Status code =", model?.status ?? 0)
         }
@@ -52,7 +53,7 @@ class PasswordViewModel {
     }
     
     /// Define selected model
-    var selectedObject: PasswordModel?
+    var selectedObject: SignInModel?
     
     //MARK: -- Closure Collection
     var showAlertClosure: (() -> ())?
@@ -60,7 +61,6 @@ class PasswordViewModel {
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
     var didGetData: (() -> ())?
-    var userNotRegisteredCallack:(()->())?
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
@@ -74,7 +74,7 @@ class PasswordViewModel {
     }
     
     //MARK: -- Example Func
-    func bindPasswordVerifyData(requestUrl: URL, parameters:[String: String]) {
+    func bindGetUserPointsData(requestUrl: URL, parameters:[String: String]) {
         
         switch Reach().connectionStatus() {
         case .offline:
@@ -82,38 +82,28 @@ class PasswordViewModel {
             self.internetConnectionStatus?()
         case .online:
             self.isLoading = true
-            
-            
             Alamofire.request(requestUrl, method: .post, parameters: parameters).responseJSON { response in
                 self.isLoading = false
                 switch response.result {
                 case .success:
-                    print("result is \(String(describing: response.result.value))")
+                    let result = response.result.value
                     do {
-                        let model = try JSONDecoder().decode(PasswordModel.self, from: response.data!)
+                        let model = try JSONDecoder().decode(MoreModel.self, from: response.data!)
                         print("model is\(model)")
-                        if let userId = model.user?.userId {
-                            UserDefaults.standard.setValue(userId, forKey: "userId")
-                            UserDefaults.standard.synchronize()
-                        }
-                        
-                        if let inviteCode = model.user?.inviteCode {
-                            UserDefaults.standard.setValue(inviteCode, forKey: "inviteCode")
-                            UserDefaults.standard.synchronize()
-                        }
-
-                        
-                        if let userModel = model.user {
-                            OPTUtilities.sharedInstance.saveUserData(model: userModel)
-                        }
+                       
                         self.model = model
                         self.didGetData?()
                     } catch let error as NSError {
                         print(String(describing: error))
                     }
-                
+                    
+                    /*
+                     self?.isLoading = false
+                     self?.model = response
+                     self?.didGetData?()*/
+                    print(result)
                 case .failure(let error):
-                    _ = String(data: response.data ?? Data(), encoding:.utf8)
+                    let responseString = String(data: response.data ?? Data(), encoding:.utf8)
                     print("error description\(error.localizedDescription)")
                 //                self.alertMessage   =   error
                 default:
@@ -125,9 +115,5 @@ class PasswordViewModel {
             break
         }
     }
-    
-}
-
-extension PasswordViewModel {
     
 }

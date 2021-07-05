@@ -164,6 +164,15 @@ extension UserProfileViewController: UITableViewDelegate, UITableViewDataSource 
         return UITableViewCell()
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("index path clicked")
+        if let urlString =  self.viewModel.model?.userPolicy?[indexPath.row].policyFile {
+            let urlApiString = APPConstants.APIPath.downloadPDF + "?doc=" + urlString
+            self.bindDownloadPDF(requestUrlString: urlApiString, parameters: [:])
+
+        }
+        
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -171,4 +180,62 @@ extension UserProfileViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-
+extension UserProfileViewController {
+    
+    func bindDownloadPDF(requestUrlString: String, parameters:[String: String]) {
+        
+        switch Reach().connectionStatus() {
+        case .offline:
+            self.viewModel.isDisconnected = true
+            self.viewModel.internetConnectionStatus?()
+        case .online:
+            self.viewModel.isLoading = true
+            
+            let urlString = requestUrlString
+            let url = URL(string: urlString)
+            let fileName = String((url!.lastPathComponent)) as NSString
+            // Create destination URL
+            let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
+            let destinationFileUrl = documentsUrl.appendingPathComponent("\(fileName)")
+            //Create URL to the source file you want to download
+            let fileURL = URL(string: urlString)
+            let sessionConfig = URLSessionConfiguration.default
+            let session = URLSession(configuration: sessionConfig)
+            let request = URLRequest(url:fileURL!)
+            let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
+                self.viewModel.isLoading = false
+                if let tempLocalUrl = tempLocalUrl, error == nil {
+                    // Success
+                    if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                        print("Successfully downloaded. Status code: \(statusCode)")
+                    }
+                    do {
+                        try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
+                        do {
+                            //Show UIActivityViewController to save the downloaded file
+                            let contents  = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+                            for indexx in 0..<contents.count {
+                                if contents[indexx].lastPathComponent == destinationFileUrl.lastPathComponent {
+                                    let activityViewController = UIActivityViewController(activityItems: [contents[indexx]], applicationActivities: nil)
+                                    DispatchQueue.main.async {
+                                        self.present(activityViewController, animated: true, completion: nil)
+                                    }
+                                }
+                            }
+                        }
+                        catch (let err) {
+                            print("error: \(err)")
+                        }
+                    } catch (let writeError) {
+                        print("Error creating a file \(destinationFileUrl) : \(writeError)")
+                    }
+                } else {
+                    print("Error took place while downloading a file. Error description: \(error?.localizedDescription ?? "")")
+                }
+            }
+            task.resume()        default:
+            break
+        }
+    }
+    
+}
