@@ -100,7 +100,8 @@ extension CategoryCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
             cell.categoryLabel.text = self.categoryList[indexPath.row].name
             if let imageName = self.categoryList[indexPath.row].image {
                 let imageUrl = APPConstants.APIPath.categoryImagePathURL + imageName
-                cell.backgroundImageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+                //cell.backgroundImageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+                cell.backgroundImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "category_placeholder"), options: .continueInBackground, completed: nil)
             }
            /* let nameArray = self.categoryList[indexPath.row].name?.components(separatedBy: " ")
             if nameArray?.count ?? 0 > 1 {

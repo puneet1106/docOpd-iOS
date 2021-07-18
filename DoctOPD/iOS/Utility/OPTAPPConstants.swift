@@ -239,7 +239,7 @@ struct APPConstants {
         static let STEPPER_COLOR = UIColor(displayP3Red: 48.0 / 256.0, green: 113.0 / 256.0, blue: 186.0 / 256.0, alpha: 1.0)
         static let BORDER_COLOR = UIColor(red: 195.0 / 255.0, green: 217.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0)
         static let VALID_TF_BG_COLOR = UIColor(red: 234.0 / 255.0, green: 242.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
-        static let BUTTON_BG_COLOR = UIColor(red: 57.0 / 255.0, green: 93.0 / 255.0, blue: 236.0 / 255.0, alpha: 1.0)
+        static let BUTTON_BG_COLOR = UIColor(red: 58.0 / 255.0, green: 88.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0)
         static let OTP_BG_COLOR = UIColor(red: 229.0 / 255.0, green: 240.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
         static let OTP_BORDER_COLOR = UIColor(red: 181.0 / 255.0, green: 208.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
         static let TEXT_COLOR = UIColor(red: 9.0 / 255.0, green: 9.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)

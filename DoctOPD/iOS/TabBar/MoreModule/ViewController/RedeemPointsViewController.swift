@@ -7,6 +7,8 @@
 
 import UIKit
 import SVProgressHUD
+import MessageUI
+import Messages
 
 class RedeemPointsViewController: UIViewController {
 
@@ -19,7 +21,9 @@ class RedeemPointsViewController: UIViewController {
     @IBOutlet weak var totalRewardLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     
-    var totalPoint: Int = 0
+    var totalPoints: Int = 0
+    var pointsValue: Int = 0
+    var isRedeemBlocked: Bool = false
     var viewModel = RedeemPointViewModel()
 
     
@@ -33,7 +37,7 @@ class RedeemPointsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.fetchInsuranceInfo()
+        //self.fetchInsuranceInfo()
     }
     
     func setUpUI(){
@@ -43,14 +47,25 @@ class RedeemPointsViewController: UIViewController {
         submitButton.addBorderAndColor(color: APPConstants.Colors.BORDER_COLOR, width: 0.0, corner_radius: 5.0, clipsToBounds: true)
         redeemDesciptionLabel.attributedText = APPConstants.RedeemPointsScreen.Description_RedeemPoints.htmlToAttributedStringTest
         redeemDesciptionLabel.font = UIFont.systemFont(ofSize: 16.0)
+        
+        self.notPurchasedLabel.text = ""
+        self.totalRewardLabel.text = "\(totalPoints)"
+        let points = Double(pointsValue)
+        self.pointWorthLabel.text! = String(format: "₹ %.2f", points)
 
+        if isRedeemBlocked {
+            self.submitButton.isUserInteractionEnabled = false
+            self.submitButton.backgroundColor = UIColor.lightGray
+        } else {
+            self.submitButton.isUserInteractionEnabled = true
+            self.submitButton.backgroundColor = APPConstants.Colors.BUTTON_BG_COLOR
+        }
+        
     }
     
     func setUpData(){
-        if (viewModel.userPolicyModel?.userPolicy?.count ?? 0) > 0 {
+        /*if (viewModel.userPolicyModel?.userPolicy?.count ?? 0) > 0 {
             self.notPurchasedLabel.text = ""
-            var totalPoints = totalPoint
-        
             if let policies = viewModel.userPolicyModel?.userPolicy {
                 
                 for policy in policies {
@@ -68,7 +83,7 @@ class RedeemPointsViewController: UIViewController {
             self.totalRewardLabel.text = "\(totalPoint)"
             self.pointWorthLabel.text = "₹ \(Double(totalPoint) * 0.03)"
         }
-        
+        */
         
     }
     
@@ -121,10 +136,24 @@ class RedeemPointsViewController: UIViewController {
             self?.setUpData()
         }
         
-        self.viewModel.didGetData = { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
+       
+        self.viewModel.didGetData = { [weak self] message in
+            //print("message is\(message)")
+            self?.showRedeemSubmitAlert(message: message)
         }
     }
+    
+    func showRedeemSubmitAlert(message: String){
+        
+        let alert = UIAlertController(title: "Message", message: message, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func backButtonAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -135,13 +164,13 @@ class RedeemPointsViewController: UIViewController {
         guard let requestUrl = URL(string: APPConstants.APIPath.redeemPoints) else {
            return
         }
-        
+
         guard let inviteCode = UserDefaults.standard.value(forKey: "inviteCode") else {
             return
         }
 
         let requestParam : [String: String] = ["inviteCode": inviteCode as! String]
-        
+
         viewModel.bindSubmitRedeemRewardPoints(requestUrl: requestUrl, parameters: requestParam)
 
     }

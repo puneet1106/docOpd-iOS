@@ -126,7 +126,9 @@ class MoreViewController: UIViewController {
     func goToRedeemPointsScreen() {
         let storyboard : UIStoryboard   =   UIStoryboard(name: APPConstants.StoryboardIdentifiers.MORE, bundle: nil)
         let vc  =   storyboard.instantiateViewController(withIdentifier: APPConstants.RedeemPointsScreen.REDEEDM_POINTS_SCREEN) as! RedeemPointsViewController
-        vc.totalPoint = viewModel.model?.totalPoints ?? 0
+        vc.totalPoints = viewModel.model?.totalPoints ?? 0
+        vc.pointsValue = viewModel.model?.pointsValue ?? 0
+        vc.isRedeemBlocked = viewModel.model?.redeemBlocked ?? false
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

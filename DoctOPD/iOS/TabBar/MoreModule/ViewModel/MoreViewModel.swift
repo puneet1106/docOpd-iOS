@@ -75,7 +75,7 @@ class MoreViewModel {
     
     //MARK: -- Example Func
     func bindGetUserPointsData(requestUrl: URL, parameters:[String: String]) {
-        
+        print("url is \(requestUrl)")
         switch Reach().connectionStatus() {
         case .offline:
             self.isDisconnected = true

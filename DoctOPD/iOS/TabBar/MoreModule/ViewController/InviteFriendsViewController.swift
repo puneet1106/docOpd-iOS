@@ -163,7 +163,7 @@ class InviteFriendsViewController: UIViewController {
     
     @IBAction func shareNowButtonActn(_ sender: UIButton) {
         if let inviteCode = UserDefaults.standard.value(forKey: "inviteCode")  {
-            let items = ["Add this invite code and earn 100 point to your Doctopd Account. Invite code is '\(inviteCode as? String)'"]
+            let items = ["Add this invite code and earn 100 point to your Doctopd Account. Invite code is '\(inviteCode as! String)'"]
             let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
             present(ac, animated: true)
         }
@@ -172,7 +172,7 @@ class InviteFriendsViewController: UIViewController {
     
     
     @IBAction func submitButtonAction(_ sender: UIButton) {
-    
+    submitInviteCode()
     }
     
     /*

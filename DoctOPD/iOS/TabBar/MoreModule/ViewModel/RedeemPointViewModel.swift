@@ -62,7 +62,7 @@ class RedeemPointViewModel {
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: (() -> ())?
-    var didGetData: (() -> ())?
+    var didGetData: ((_ message:String) -> ())?
     var didGetPolicyData: (() -> ())?
 
     
@@ -96,7 +96,11 @@ class RedeemPointViewModel {
                         print("model is\(model)")
                        
                         self.model = model*/
-                        self.didGetData?()
+                        if let message = (result as? NSDictionary)?.value(forKey: "message") {
+                            self.didGetData?(message as! String)
+                        }
+
+                       // self.didGetData?()
                     } catch let error as NSError {
                         print(String(describing: error))
                     }
